@@ -1,0 +1,1244 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <!-- 🔥 Meta Charset & Viewport -->
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+  <!-- 🌟 Title - The Most Important SEO Element -->
+  <title>Iyonicorp | Digital Solutions - Web Development, AI Automation & SEO</title>
+
+  <!-- 📝 Meta Description (160 Characters) - Boost Google Ranking -->
+  <meta name="description" content="Iyonicorp is your #1 partner for web development, AI automation, SEO, digital marketing, lead generation, chatbot development, and social media automation. We help businesses grow online!">
+
+  <!-- 🔑 Meta Keywords - Includes the Most Searched Business Terms -->
+  <meta name="keywords" content="Web Development, Digital Marketing, AI Automation, SEO Services, Social Media Automation, Lead Generation, Affiliate Marketing, Chatbot Creation, Business Growth, Content Creation, Branding, Website Design, PPC Advertising, Online Traffic, Small Business SEO, Business Optimization, Microsoft Bing Optimization, Rank on Google, Google SEO, E-commerce Solutions, Local SEO, Best Business Websites">
+
+  <!-- 📌 Author -->
+  <meta name="author" content="Iyonicorp Team">
+
+  <!-- ⚡ Robots Meta - Ensure Proper Indexing -->
+  <meta name="robots" content="index, follow">
+  <meta name="googlebot" content="index, follow">
+  <meta name="bingbot" content="index, follow">
+
+  <!-- 🌍 Canonical URL - Prevent Duplicate Content Issues -->
+  <link rel="canonical" href="https://www.iyonicorp.com/">
+
+  <!-- 🌐 Open Graph (OG) for Social Media Sharing -->
+  <meta property="og:title" content="Iyonicorp | Digital Solutions - Web Development, AI & SEO">
+  <meta property="og:description" content="We offer expert web development, AI automation, SEO, digital marketing, and business growth solutions.">
+  <meta property="og:image" content="https://imgur.com/a/lFfJGig">
+  <meta property="og:url" content="https://www.iyonicorp.com/">
+  <meta property="og:type" content="website">
+
+  <!-- 🐦 Twitter Card - Optimize for Twitter Sharing -->
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="Iyonicorp | Digital Solutions - Web Development, AI & SEO">
+  <meta name="twitter:description" content="Expert digital solutions: web design, SEO, AI automation, and marketing for businesses.">
+  <meta name="twitter:image" content="https://imgur.com/a/lFfJGig">
+
+  <!-- 🔍 Google Site Verification (Add Your Google Search Console Verification) -->
+  <meta name="google-site-verification" content="Dy076_18Gi3ryC5kVpLVUWzZ8y4mnsHQUEE8a_UAyEo" />
+
+  <!-- 🔎 Bing Site Verification -->
+  <meta name="msvalidate.01" content="335DF0B9C58AFDDF8ADF856B8571C44D" />
+
+  <!-- 🚀 Schema Markup (Structured Data for Search Engines) -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "Organization",
+    "name": "Iyonicorp",
+    "url": "https://www.iyonicorp.com",
+    "logo": "https://imgur.com/a/vSZDfdX",
+    "description": "Iyonicorp provides expert web development, AI automation, SEO, and digital marketing solutions to grow businesses online.",
+    "contactPoint": {
+      "@type": "ContactPoint",
+      "telephone": "+1-800-123-4567",
+      "contactType": "customer service",
+      "areaServed": "Global",
+      "availableLanguage": ["English"]
+    },
+    "sameAs": [
+      "https://www.facebook.com/iyonicorp",
+      "https://www.twitter.com/iyonicorp",
+      "https://www.linkedin.com/company/iyonicorp"
+    ]
+  }
+  </script>
+
+  <!-- 🖼️ Favicon (Website Icon) -->
+  <link rel="icon" href="https://imgur.com/a/vSZDfdX" type="image/x-icon">
+  <script src="https://cdn.tailwindcss.com"></script>
+  <!-- Add Animation CSS -->
+<style>
+/* Fade-in Animation (Works While Scrolling) */
+.fade-in {
+  opacity: 0;
+  transform: translateY(50px);
+  transition: all 0.8s ease-in-out;
+}
+.animate-visible {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+/* Blinking Button Effect */
+.blinking-btn {
+  animation: blink 1.5s infinite alternate;
+}
+@keyframes blink {
+  0% { opacity: 1; }
+  50% { opacity: 0.6; }
+  100% { opacity: 1; }
+}
+
+/* Image Styling with Borders & Shadow */
+.img-border {
+  border: 4px solid #6366f1;
+  border-radius: 15px;
+  box-shadow: 5px 5px 15px rgba(99, 102, 241, 0.4);
+  transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
+}
+.img-border:hover {
+  transform: scale(1.05);
+  box-shadow: 8px 8px 20px rgba(99, 102, 241, 0.6);
+}
+
+/* Scattered Layout */
+.scattered-layout:nth-child(even) {
+  transform: rotate(-2deg);
+}
+.scattered-layout:nth-child(odd) {
+  transform: rotate(2deg);
+}
+.scattered-layout:hover {
+  transform: rotate(0) scale(1.02);
+  transition: all 0.4s ease-in-out;
+}
+/* 🌟 Glowing Brand Name */
+.brand-name {
+  font-size: 2rem;
+  font-weight: bold;
+  color: #6366f1;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  text-shadow: 0px 0px 8px rgba(99, 102, 241, 0.8);
+  animation: glow 2s infinite alternate;
+}
+
+/* Glowing Animation */
+@keyframes glow {
+  from {
+    text-shadow: 0px 0px 8px rgba(99, 102, 241, 0.8);
+  }
+  to {
+    text-shadow: 0px 0px 20px rgba(99, 102, 241, 1);
+  }
+}
+
+/* 🏗️ Navbar Styling */
+.navbar {
+  background: white;
+  box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
+  position: sticky;
+  top: 0;
+  z-index: 50;
+  padding: 1rem;
+}
+
+/* 📌 Center Navigation Links on Large Screens */
+.nav-links {
+  display: flex;
+  gap: 20px;
+  text-align: center;
+  justify-content: center;
+  flex: 1;
+}
+
+/* 📱 Mobile Menu */
+.menu-button {
+  display: none;
+  cursor: pointer;
+  font-size: 1.8rem;
+  color: #6366f1;
+  background: none;
+  border: none;
+}
+
+/* 📲 Slide-in Mobile Menu */
+.mobile-menu {
+  display: none;
+  position: absolute;
+  top: 100%;
+  left: 0;
+  width: 100%;
+  background: white;
+  box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
+  text-align: center;
+  flex-direction: column;
+  gap: 15px;
+  padding: 20px 0;
+}
+
+.mobile-menu.active {
+  display: flex;
+  animation: slideDown 0.3s ease-in-out;
+}
+
+/* Smooth Slide-down Effect */
+@keyframes slideDown {
+  from {
+    opacity: 0;
+    transform: translateY(-10px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* Remove delay for section animations */
+.hero-content, .service-content, .brand-content {
+  animation-delay: 0s !important;
+}
+
+/* 📏 Responsive Design */
+@media (max-width: 768px) {
+  .nav-links {
+    display: none;
+  }
+  .menu-button {
+    display: block;
+  }
+}
+/* 🌟 Hero Section */
+.hero-section {
+  position: relative;
+  width: 100%;
+  height: 50vh; /* Compact height */
+  background: #4f46e5;
+  color: white;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  overflow: hidden;
+  padding: 40px 20px;
+}
+
+/* 🎭 Curtain Effect */
+.curtain {
+  position: absolute;
+  width: 50%;
+  height: 100%;
+  background: rgb(78, 150, 231);
+  top: 0;
+  z-index: 10;
+}
+
+/* Left Curtain */
+.curtain-left {
+  left: 0;
+}
+
+/* Right Curtain */
+.curtain-right {
+  right: 0;
+}
+
+/* 🎬 Curtain Closing & Re-Opening (Smooth, Always Present) */
+@keyframes curtainCycle {
+  0%, 10% { width: 50%; }  /* Fully closed */
+  15%, 30% { width: 0%; }  /* Fully open for First Section */
+  35%, 45% { width: 50%; } /* Closed before next section */
+  50%, 65% { width: 0%; }  /* Open for Second Section */
+  70%, 80% { width: 50%; } /* Closed before brand name */
+  85%, 95% { width: 0%; }  /* Open for Brand Name */
+}
+
+.curtain {
+  animation: curtainCycle 15s ease-in-out infinite;
+}
+
+/* ✨ Section Visibility Control (Sync with Curtain) */
+.hero-content, .service-content, .brand-content {
+  opacity: 0;
+  position: absolute;
+}
+
+/* 🚀 First Reveal: Hero Message */
+.hero-content {
+  transform: scale(1.05);
+  animation: heroFadeCycle 15s ease-in-out infinite;
+}
+
+@keyframes heroFadeCycle {
+  0%, 15% { opacity: 0; }
+  20%, 30% { opacity: 1; transform: scale(1); } /* Show after curtain opens */
+  35% { opacity: 0; }
+}
+
+/* 🎭 Second Reveal: Services */
+.service-content {
+  transform: scale(1.05);
+  animation: serviceFadeCycle 15s ease-in-out infinite;
+}
+
+@keyframes serviceFadeCycle {
+  0%, 35% { opacity: 0; }
+  50%, 65% { opacity: 1; transform: scale(1); } /* Show after curtain opens */
+  70% { opacity: 0; }
+}
+
+/* 🏆 Third Reveal: Brand Name */
+.brand-content {
+  font-size: 4rem;
+  font-weight: bold;
+  color: white;
+  text-shadow: 0px 0px 20px rgba(255, 255, 255, 0.8);
+  animation: brandFadeCycle 15s ease-in-out infinite;
+}
+
+@keyframes brandFadeCycle {
+  0%, 70% { opacity: 0; }
+  85%, 95% { opacity: 1; transform: scale(1); } /* Show after curtain opens */
+  100% { opacity: 0; }
+}
+
+/* 🎭 Glowing Button Animation */
+.hero-button {
+  animation: glowButton 1.5s infinite alternate;
+}
+
+@keyframes glowButton {
+  0% { box-shadow: 0 0 10px rgba(255, 255, 255, 0.6); }
+  100% { box-shadow: 0 0 20px rgba(255, 255, 255, 1); }
+}
+
+/* 📏 Responsive Adjustments */
+@media (max-width: 768px) {
+  .hero-section {
+    height: 40vh;
+  }
+  .hero-content h2, .service-content h2, .brand-content {
+    font-size: 2rem;
+  }
+  .hero-content p, .service-content p {
+    font-size: 1rem;
+  }
+  .hero-button {
+    font-size: 0.9rem;
+    padding: 10px 16px;
+  }
+}
+
+/* 🌟 Success Stories Section */
+.success-stories {
+  background: linear-gradient(135deg, #eef2ff, #dbeafe);
+  padding: 4rem 1rem;
+}
+
+/* 📢 Section Title Styling */
+.success-stories h3 {
+  font-size: 2.5rem;
+  font-weight: bold;
+  color: #4f46e5;
+  text-align: center;
+  position: relative;
+  display: inline-block;
+  padding-bottom: 10px;
+}
+
+/* 🚀 Title Underline Effect */
+.success-stories h3::after {
+  content: '';
+  width: 50px;
+  height: 4px;
+  background: #6366f1;
+  position: absolute;
+  bottom: 0;
+  left: 50%;
+  transform: translateX(-50%);
+}
+
+/* 💎 Card Layout */
+.story-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 2rem;
+  margin-top: 3rem;
+}
+
+/* 🎭 Individual Success Card */
+.story-card {
+  background: white;
+  padding: 2rem;
+  border-radius: 12px;
+  box-shadow: 0px 5px 15px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s ease-in-out;
+  text-align: center;
+}
+
+.story-card:hover {
+  transform: translateY(-5px);
+}
+
+/* 🌟 Icon Styling */
+.story-card img {
+  width: 60px;
+  margin-bottom: 1rem;
+}
+
+/* 🏆 Success Text Styling */
+.story-card h4 {
+  font-size: 1.5rem;
+  font-weight: bold;
+  color: #4f46e5;
+}
+
+.story-card p {
+  margin-top: 0.5rem;
+  color: #555;
+  font-size: 1.1rem;
+}
+
+/* 📏 Responsive Adjustments */
+@media (max-width: 768px) {
+  .success-stories h3 {
+    font-size: 2rem;
+  }
+  .story-card h4 {
+    font-size: 1.3rem;
+  }
+  .story-card p {
+    font-size: 1rem;
+  }
+}
+
+/* 🌟 Ratings Section */
+.ratings-section {
+  background: linear-gradient(135deg, #eef2ff, #dbeafe);
+  padding: 4rem 1rem;
+  text-align: center;
+}
+
+/* 🏆 Section Title Styling */
+.ratings-section h3 {
+  font-size: 2.5rem;
+  font-weight: bold;
+  color: #4f46e5;
+  position: relative;
+  display: inline-block;
+  padding-bottom: 10px;
+}
+
+/* 🔵 Title Underline Effect */
+.ratings-section h3::after {
+  content: '';
+  width: 50px;
+  height: 4px;
+  background: #6366f1;
+  position: absolute;
+  bottom: 0;
+  left: 50%;
+  transform: translateX(-50%);
+}
+
+/* 📊 Ratings Grid Layout */
+.ratings-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 2rem;
+  margin-top: 3rem;
+}
+
+/* 🌟 Individual Rating Card */
+.rating-card {
+  background: white;
+  padding: 2rem;
+  border-radius: 12px;
+  box-shadow: 0px 5px 15px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s ease-in-out;
+  text-align: center;
+}
+
+.rating-card:hover {
+  transform: translateY(-5px);
+}
+
+/* ⭐ Clickable Stars */
+.stars {
+  font-size: 1.8rem;
+  cursor: pointer;
+  display: flex;
+  justify-content: center;
+  gap: 5px;
+  transition: color 0.3s ease-in-out;
+}
+
+/* 🎭 Shaking Animation (Default State) */
+@keyframes shake {
+  0% { transform: rotate(0deg); }
+  25% { transform: rotate(-10deg); }
+  50% { transform: rotate(10deg); }
+  75% { transform: rotate(-5deg); }
+  100% { transform: rotate(0deg); }
+}
+
+.stars span {
+  display: inline-block;
+  color: #ddd;
+  animation: shake 1s infinite alternate;
+}
+
+/* 🌟 Stop Shaking When Clicked */
+.stars span.active {
+  color: #ffc107;
+  animation: none;
+}
+
+/* 📊 Progress Bar */
+.rating-progress {
+  width: 100%;
+  height: 10px;
+  background: #e4e4e4;
+  border-radius: 5px;
+  overflow: hidden;
+  margin-top: 0.5rem;
+}
+
+.rating-fill {
+  height: 100%;
+  background: #4f46e5;
+  width: 90%;
+  transition: width 1s ease-in-out;
+}
+
+/* 🎖 Rating Number */
+.rating-number {
+  font-size: 1.5rem;
+  font-weight: bold;
+  color: #4f46e5;
+  margin-top: 0.5rem;
+}
+
+/* 📩 Thank You Popup */
+.popup {
+  position: fixed;
+  bottom: 20px;
+  left: 50%;
+  transform: translateX(-50%);
+  background: #4f46e5;
+  color: white;
+  padding: 15px 30px;
+  border-radius: 8px;
+  font-size: 1.2rem;
+  box-shadow: 0px 5px 15px rgba(0, 0, 0, 0.2);
+  opacity: 0;
+  visibility: hidden;
+  transition: opacity 0.3s ease-in-out, visibility 0.3s ease-in-out;
+}
+
+/* Popup Visible */
+.popup.show {
+  opacity: 1;
+  visibility: visible;
+}
+/* 🌟 Brands Section */
+.brands-section {
+  background: linear-gradient(135deg, #eef2ff, #dbeafe);
+  padding: 4rem 1rem;
+  text-align: center;
+}
+
+/* 🏆 Section Title Styling */
+.brands-section h3 {
+  font-size: 2.5rem;
+  font-weight: bold;
+  color: #4f46e5;
+  position: relative;
+  display: inline-block;
+  padding-bottom: 10px;
+}
+
+/* 🔵 Title Underline Effect */
+.brands-section h3::after {
+  content: '';
+  width: 50px;
+  height: 4px;
+  background: #6366f1;
+  position: absolute;
+  bottom: 0;
+  left: 50%;
+  transform: translateX(-50%);
+}
+
+/* 📊 Brands Grid Layout */
+.brands-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(120px, 1fr));
+  gap: 2rem;
+  margin-top: 3rem;
+  align-items: center;
+  justify-content: center;
+}
+
+/* 🌟 Brand Logo */
+.brand-logo {
+  background: white;
+  padding: 15px;
+  border-radius: 10px;
+  box-shadow: 0px 5px 15px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 100px;
+}
+
+.brand-logo img {
+  max-width: 100px;
+  transition: transform 0.3s ease-in-out;
+}
+
+/* 🌟 Hover Effect */
+.brand-logo:hover {
+  transform: translateY(-5px);
+  box-shadow: 0px 8px 20px rgba(0, 0, 0, 0.2);
+}
+
+.brand-logo:hover img {
+  transform: scale(1.1);
+}
+
+/* 📏 Responsive Adjustments */
+@media (max-width: 768px) {
+  .brands-section h3 {
+    font-size: 2rem;
+  }
+  .brands-grid {
+    grid-template-columns: repeat(auto-fit, minmax(100px, 1fr));
+  }
+  .brand-logo img {
+    max-width: 80px;
+  }
+}
+
+    /* Existing CSS styles... */
+
+    /* 📏 Ensure the page takes full height */
+    body {
+      display: flex;
+      flex-direction: column;
+      min-height: 100vh; /* Ensure full height */
+      margin: 0;
+    }
+
+    main {
+      flex: 1; /* Pushes footer to bottom */
+    }
+
+    /* 🌟 Footer Styles */
+    .footer {
+      background: linear-gradient(135deg, #4f46e5, #6366f1);
+      color: white;
+      padding: 20px;
+      text-align: center;
+      bottom: 0;
+      left: 0;
+      width: 100%;
+      z-index: 100;
+    }
+
+    /* 🎇 Glitter Effect on Brand Name */
+    .glitter-text {
+      font-weight: bold;
+      font-size: 1.5rem;
+      position: relative;
+      background: linear-gradient(90deg, #ffdd57, #ff7eb3, #ffffff, #ff7eb3, #ffdd57);
+      background-size: 400% 400%;
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+      animation: shimmer 3s infinite linear;
+    }
+
+    /* ✨ Shimmer Animation */
+    @keyframes shimmer {
+      0% { background-position: 0% 50%; }
+      50% { background-position: 100% 50%; }
+      100% { background-position: 0% 50%; }
+    }
+
+    /* 📏 Responsive Adjustments */
+    @media (max-width: 768px) {
+      .glitter-text {
+        font-size: 1.2rem;
+      }
+    }
+  </style>
+</head>
+<body class="bg-gray-100 text-gray-800">
+
+  <!-- Navbar -->
+  <header class="navbar">
+    <div class="container mx-auto flex justify-between items-center">
+      <!-- 🌟 Glowing Brand Name -->
+      <h1 class="brand-name">Iyonicorp</h1>
+  
+      <!-- 📏 Centered Navigation Links for Large Screens -->
+      <nav class="nav-links">
+        <a href="#about" class="text-gray-600 hover:text-indigo-600">About</a>
+        <a href="#services" class="text-gray-600 hover:text-indigo-600">Services</a>
+        <a href="#success-stories" class="text-gray-600 hover:text-indigo-600">Success Stories</a>
+        <a href="#contact" class="text-gray-600 hover:text-indigo-600">Contact</a>
+      </nav>
+  
+      <!-- 📱 Menu Button for Small Screens -->
+      <button class="menu-button">&#9776;</button>
+    </div>
+  
+    <!-- 📲 Mobile Menu -->
+    <div class="mobile-menu">
+      <a href="#about" class="text-gray-600 hover:text-indigo-600">About</a>
+      <a href="#services" class="text-gray-600 hover:text-indigo-600">Services</a>
+      <a href="#success-stories" class="text-gray-600 hover:text-indigo-600">Success Stories</a>
+      <a href="#contact" class="text-gray-600 hover:text-indigo-600">Contact</a>
+    </div>
+  </header>
+  
+  <main>
+ <!-- Hero Section -->
+ <section class="hero-section">
+  <!-- 🎭 Animated Curtains -->
+  <div class="curtain curtain-left"></div>
+  <div class="curtain curtain-right"></div>
+
+  <!-- 🌟 First Reveal: Main Message -->
+  <div class="hero-content">
+    <h2 class="text-4xl font-bold">Empower Your Business with Iyonicorp</h2>
+    <p class="text-lg mt-3">We create powerful websites, marketing solutions, automation tools, and AI-driven strategies to grow your business.</p>
+    <a href="#services" class="hero-button bg-white text-indigo-600 mt-5 px-5 py-2 rounded-full inline-block font-semibold">Explore Our Services</a>
+  </div>
+
+  <!-- 🚀 Second Reveal: Services -->
+  <div class="service-content">
+    <h2 class="text-4xl font-bold">Who We Are</h2>
+    <p class="text-lg mt-3"> Iyonicorp is a **one-stop digital solutions agency** specializing in **web development, marketing, automation, and AI-driven business growth**. 
+      Our goal is to **help businesses scale, generate leads, and maximize online presence** with cutting-edge technology and expert-driven strategies.</p>
+    <a href="#services" class="hero-button bg-white text-indigo-600 mt-5 px-5 py-2 rounded-full inline-block font-semibold">See Details</a>
+  </div>
+
+  <!-- 🎭 Third Reveal: Brand Name -->
+  <div class="brand-content">IYONICORP</div>
+</section>
+<!-- Services Section -->
+<section id="services" class="py-16 bg-gray-100">
+  <div class="container mx-auto text-center">
+    <h3 class="text-4xl font-bold text-indigo-600">What We Offer</h3>
+    <p class="mt-4 text-lg text-gray-600 max-w-3xl mx-auto">
+      Our powerful digital solutions will take your business to the next level.
+    </p>
+  </div>
+
+  <!-- Service 1: Web Development & SEO -->
+  <section class="bg-white shadow-lg rounded-lg mt-12 overflow-hidden fade-in scattered-layout">
+    <div class="md:flex">
+      <img src="pexels-thisisengineering-3861958.jpg" alt="Web Development" class="w-full md:w-1/2 img-border">
+      <div class="p-6 flex flex-col justify-center text-center md:text-left">
+        <h4 class="text-3xl font-bold text-indigo-600">🌍 Web Development & SEO</h4>
+        <p class="mt-4 text-gray-600">We build stunning, **high-performance websites** optimized for SEO, ensuring that your business stands out online.</p>
+        <a href="https://yourwebsite.com/web-development" class="mt-6 inline-block bg-indigo-600 text-white px-6 py-3 rounded-full font-semibold blinking-btn">Explore More</a>
+      </div>
+    </div>
+  </section>
+  
+  <!-- Service 2: Digital Marketing -->
+  <section class="bg-gray-200 shadow-lg rounded-lg mt-12 overflow-hidden fade-in scattered-layout">
+    <div class="md:flex flex-row-reverse">
+      <img src="pexels-goumbik-590022.jpg" alt="Digital Marketing" class="w-full md:w-1/2 img-border">
+      <div class="p-6 flex flex-col justify-center text-center md:text-left">
+        <h4 class="text-3xl font-bold text-indigo-600">📈 Digital Marketing</h4>
+        <p class="mt-4 text-gray-600">Our expert marketing team runs targeted ad campaigns and email strategies to **drive quality leads & boost conversions**.</p>
+        <a href="https://yourwebsite.com/marketing" class="mt-6 inline-block bg-indigo-600 text-white px-6 py-3 rounded-full font-semibold blinking-btn">Discover More</a>
+      </div>
+    </div>
+  </section>
+  
+  <!-- Service 3: AI Automation & Bots -->
+  <section class="bg-white shadow-lg rounded-lg mt-12 overflow-hidden fade-in scattered-layout">
+    <div class="md:flex">
+      <img src="igor-omilaev-gVQLAbGVB6Q-unsplash.jpg" alt="AI Automation" class="w-full md:w-1/2 img-border">
+      <div class="p-6 flex flex-col justify-center text-center md:text-left">
+        <h4 class="text-3xl font-bold text-indigo-600">🤖 AI Automation & Bots</h4>
+        <p class="mt-4 text-gray-600">We use AI to automate customer interactions, saving businesses time while **enhancing engagement & satisfaction**.</p>
+        <a href="https://yourwebsite.com/automation" class="mt-6 inline-block bg-indigo-600 text-white px-6 py-3 rounded-full font-semibold blinking-btn">Learn More</a>
+      </div>
+    </div>
+  </section>
+  
+  <!-- Service 4: Social Media Automation -->
+  <section class="bg-gray-200 shadow-lg rounded-lg mt-12 overflow-hidden fade-in scattered-layout">
+    <div class="md:flex flex-row-reverse">
+      <img src="pexels-pixabay-533446.jpg" alt="Social Media Automation" class="w-full md:w-1/2 img-border">
+      <div class="p-6 flex flex-col justify-center text-center md:text-left">
+        <h4 class="text-3xl font-bold text-indigo-600">📢 Social Media Automation</h4>
+        <p class="mt-4 text-gray-600">Schedule, optimize, and automate your social media presence to **increase brand awareness & audience engagement**.</p>
+        <a href="https://yourwebsite.com/social-media" class="mt-6 inline-block bg-indigo-600 text-white px-6 py-3 rounded-full font-semibold blinking-btn">See More</a>
+      </div>
+    </div>
+  </section>
+  
+  <!-- Service 5: Affiliate Marketing & Passive Income -->
+  <section class="bg-white shadow-lg rounded-lg mt-12 overflow-hidden fade-in scattered-layout">
+    <div class="md:flex">
+      <img src="pexels-olly-3761509.jpg" alt="Affiliate Marketing" class="w-full md:w-1/2 img-border">
+      <div class="p-6 flex flex-col justify-center text-center md:text-left">
+        <h4 class="text-3xl font-bold text-indigo-600">💰 Affiliate & Passive Income</h4>
+        <p class="mt-4 text-gray-600">We help businesses **monetize their platforms** by implementing smart affiliate marketing strategies for passive income.</p>
+        <a href="https://yourwebsite.com/affiliate-marketing" class="mt-6 inline-block bg-indigo-600 text-white px-6 py-3 rounded-full font-semibold blinking-btn">Start Earning</a>
+      </div>
+    </div>
+  </section>
+
+   <!-- Service 4: Social Media Automation -->
+   <section class="bg-gray-200 shadow-lg rounded-lg mt-12 overflow-hidden fade-in scattered-layout">
+    <div class="md:flex flex-row-reverse">
+      <img src="pexels-energepic-com-27411-2988232.jpg" alt="Payment Solutions" class="w-full md:w-1/2 img-border">
+      <div class="p-6 flex flex-col justify-center text-center md:text-left">
+        <h4 class="text-3xl font-bold text-indigo-600">💳 Payment Solutions Providers</h4>
+          <p class="mt-4 text-gray-600">We offer seamless and secure payment solutions to help businesses **streamline transactions** and **enhance customer experience**.</p>
+          <a href="https://yourwebsite.com/payment-solutions" class="mt-6 inline-block bg-indigo-600 text-white px-6 py-3 rounded-full font-semibold blinking-btn">Discover More</a>
+        </div>
+    </div>
+  </section>
+    <!-- 🌟 Success Stories Section -->
+<section id="success-stories" class="success-stories">
+  <div class="container mx-auto text-center">
+    
+    <!-- 🏆 Section Title -->
+    <h3>Success Stories</h3>
+    <p class="mt-4 text-lg text-gray-600 max-w-3xl mx-auto">
+      We have helped **businesses, freelancers, and startups** achieve **incredible growth** through our **cutting-edge digital solutions**.
+    </p>
+
+    <!-- 🔥 Success Story Grid -->
+    <div class="story-grid">
+      
+      <!-- 🚀 Success Story 1 -->
+      <div class="story-card">
+        <img src="https://cdn-icons-png.flaticon.com/512/2331/2331970.png" alt="Growth Icon">
+        <h4>🚀 250% Increase in Sales</h4>
+        <p>Our SEO and marketing strategies **helped an e-commerce startup scale their revenue** by 250% in just 6 months.</p>
+      </div>
+
+      <!-- 🤖 Success Story 2 -->
+      <div class="story-card">
+        <img src="https://cdn-icons-png.flaticon.com/512/4712/4712038.png" alt="Bot Icon">
+
+        <h4>🤖 AI-Powered Automation</h4>
+        <p>By **leveraging AI-driven automation**, we increased a brand's social media engagement rate **by 300%** with minimal manual effort.</p>
+      </div>
+
+      <!-- 📢 Success Story 3 -->
+      <div class="story-card">
+        <img src="https://cdn-icons-png.flaticon.com/512/684/684831.png" alt="Marketing Icon">
+        <h4>📢 5x More Lead Conversions</h4>
+        <p>Our targeted **Google Ads and content marketing** strategies **boosted lead conversion rates** by 5x for a SaaS company.</p>
+      </div>
+
+      <!-- 💰 Success Story 4 -->
+      <div class="story-card">
+        <img src="https://cdn-icons-png.flaticon.com/512/3135/3135706.png" alt="Revenue Icon">
+        <h4>💰 Passive Income Growth</h4>
+        <p>Through **affiliate marketing and automation**, we helped freelancers generate **sustainable passive income** every month.</p>
+      </div>
+
+            <!-- 🌐 Success Story 5 -->
+            <div class="story-card">
+              <img src="https://cdn-icons-png.flaticon.com/512/1055/1055687.png" alt="Website Icon">
+              <h4>🌐 Stunning Website Creation & Hosting</h4>
+              <p>Our team designed and hosted a **visually stunning, high-performance website** that boosted the client's online presence and **improved SEO rankings** significantly.</p>
+            </div>
+      
+      <!-- 💳 Success Story 6 -->
+      <div class="story-card">
+        <img src="https://cdn-icons-png.flaticon.com/512/633/633611.png" alt="Money Bag Icon">
+
+        <h4>💳 Seamless Payment Solutions</h4>
+        <p>We implemented secure and efficient payment solutions for a client, resulting in a **30% increase in transaction efficiency** and **enhanced customer satisfaction**.</p>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+<!-- Ratings Section -->
+ <!-- 🌟 Ratings & Reviews Section -->
+<section id="ratings" class="ratings-section">
+  <div class="container mx-auto">
+    
+    <!-- 🏆 Section Title -->
+    <h3>Our Ratings & Reviews</h3>
+    <p class="mt-4 text-lg text-gray-600 max-w-3xl mx-auto">
+      Rated highly by our users for trust, service quality, and overall experience.
+    </p>
+
+    <!-- ⭐ Ratings Grid -->
+    <div class="ratings-grid">
+      
+      <!-- 🌍 Brand Rating -->
+      <div class="rating-card">
+        <h4>🌍 Brand Rating</h4>
+        <div class="stars">
+          <span>★</span><span>★</span><span>★</span><span>★</span><span>★</span>
+        </div>
+        <div class="rating-progress"><div class="rating-fill" style="width: 95%;"></div></div>
+        <div class="rating-number">4.8 / 5</div>
+      </div>
+
+      <!-- 👥 User Rating -->
+      <div class="rating-card">
+        <h4>👥 User Satisfaction</h4>
+        <div class="stars">
+          <span>★</span><span>★</span><span>★</span><span>★</span><span>★</span>
+        </div>
+        <div class="rating-progress"><div class="rating-fill" style="width: 92%;"></div></div>
+        <div class="rating-number">4.1 / 5</div>
+      </div>
+
+      <!-- 📊 Score Rating -->
+      <div class="rating-card">
+        <h4>📊 Score Rating</h4>
+        <div class="stars">
+          <span>★</span><span>★</span><span>★</span><span>★</span><span>★</span>
+        </div>
+        <div class="rating-progress"><div class="rating-fill" style="width: 90%;"></div></div>
+        <div class="rating-number">4.5 / 5</div>
+      </div>
+
+      <!-- 🛡️  Trust Score -->
+      <div class="rating-card">
+        <h4>🛡️  Trust Rating</h4>
+        <div class="stars">
+          <span>★</span><span>★</span><span>★</span><span>★</span><span>★</span>
+        </div>
+        <div class="rating-progress"><div class="rating-fill" style="width: 97%;"></div></div>
+        <div class="rating-number">4.9 / 5</div>
+      </div>
+
+      <!-- 💼 Trust Score -->
+      <div class="rating-card">
+        <h4>💼 Service Quality</h4>
+        <div class="stars">
+          <span>★</span><span>★</span><span>★</span><span>★</span><span>★</span>
+        </div>
+        <div class="rating-progress"><div class="rating-fill" style="width: 93%;"></div></div>
+        <div class="rating-number">4.6 / 5</div>
+      </div>
+      
+    </div>
+  </div>
+</section>
+
+<!-- 📩 Thank You Popup -->
+<div id="popup" class="popup">⭐ Thank you for your review! ⭐</div>
+<!-- 🌟 Trusted & Partner Brands Section -->
+<section id="brands" class="brands-section">
+  <div class="container mx-auto">
+    
+    <!-- 🏆 Section Title -->
+    <h3>Our Sponsored, Trusted & Partner Brands</h3>
+    <p class="mt-4 text-lg text-gray-600 max-w-3xl mx-auto">
+      We are honored to work with **some of the most respected brands** in the world.
+    </p>
+
+    <!-- 🔥 Brands Grid -->
+    <div class="brands-grid">
+      
+      <!-- 🌍 Google -->
+      <div class="brand-logo">
+        <img src="https://upload.wikimedia.org/wikipedia/commons/2/2f/Google_2015_logo.svg" alt="Google">
+      </div>
+
+      <!-- 🏆 Microsoft -->
+      <div class="brand-logo">
+        <img src="https://upload.wikimedia.org/wikipedia/commons/4/44/Microsoft_logo.svg" alt="Microsoft">
+      </div>
+
+      <!-- 🛍️ Amazon -->
+      <div class="brand-logo">
+        <img src="https://upload.wikimedia.org/wikipedia/commons/a/a9/Amazon_logo.svg" alt="Amazon">
+      </div>
+
+      <!-- 💳 PayPal -->
+      <div class="brand-logo">
+        <img src="https://upload.wikimedia.org/wikipedia/commons/b/b5/PayPal.svg" alt="PayPal">
+      </div>
+
+     <!-- 👟 Adidas -->
+<div class="brand-logo">
+  <img src="https://upload.wikimedia.org/wikipedia/commons/2/24/Adidas_logo.png" alt="Adidas">
+</div>
+
+
+      <!-- 📱 Apple -->
+      <div class="brand-logo">
+        <img src="https://upload.wikimedia.org/wikipedia/commons/f/fa/Apple_logo_black.svg" alt="Apple">
+      </div>
+
+      <!-- 🏢 IBM -->
+      <div class="brand-logo">
+        <img src="https://upload.wikimedia.org/wikipedia/commons/5/51/IBM_logo.svg" alt="IBM">
+      </div>
+
+<!-- 👕 Nike -->
+<div class="brand-logo">
+  <img src="https://upload.wikimedia.org/wikipedia/commons/a/a6/Logo_NIKE.svg" alt="Nike">
+</div>
+
+     <!-- 🏦 Visa -->
+<div class="brand-logo">
+  <img src="https://upload.wikimedia.org/wikipedia/commons/0/04/Visa.svg" alt="Visa">
+</div>
+
+
+            <!-- 🏧 Mastercard -->
+            <div class="brand-logo">
+              <img src="https://upload.wikimedia.org/wikipedia/commons/2/2a/Mastercard-logo.svg" alt="Mastercard">
+            </div>
+      
+    </div>
+  </div>
+</section>
+
+<!-- 🌟 Contact Us Section -->
+<section id="contact" class="contact-section">
+  <div class="container mx-auto text-center">
+    
+    <!-- 🏆 Section Title -->
+    <h3>Let's Work Together</h3>
+    <p>
+      Have an idea? Need a website, AI automation, or marketing strategy? 
+      Send us a message and let's create something amazing!
+    </p>
+
+    <!-- 📩 Contact Form -->
+    <form id="contactForm" class="contact-form">
+      <input type="text" id="name" placeholder="Your Name" required>
+      <input type="email" id="email" placeholder="Your Email" required>
+      <textarea id="message" placeholder="Your Message" rows="5" required></textarea>
+      <button type="submit">Send Message</button>
+    </form>
+
+    <!-- 💬 Success & Error Messages -->
+    <div id="responseMessage" class="hidden"></div>
+  </div>
+</section>
+
+<!-- 🎨 CSS for Contact Form -->
+<style>
+/* 🌟 Contact Section */
+.contact-section {
+  background: linear-gradient(135deg, #4f46e5, #6366f1);
+  color: white;
+  padding: 4rem 1rem;
+  text-align: center;
+  position: relative;
+  overflow: hidden;
+}
+
+/* 🏆 Section Title */
+.contact-section h3 {
+  font-size: 2.5rem;
+  font-weight: bold;
+  color: white;
+}
+
+/* 📜 Subtitle Text */
+.contact-section p {
+  max-width: 600px;
+  margin: 10px auto;
+  font-size: 1.2rem;
+  color: #e0e0e0;
+}
+
+/* 📩 Contact Form */
+.contact-form {
+  background: rgb(255, 255, 255);
+  padding: 2rem;
+  border-radius: 12px;
+  box-shadow: 0px 5px 15px rgba(0, 0, 0, 0.2);
+  max-width: 500px;
+  margin: 2rem auto;
+  text-align: left;
+  position: relative;
+}
+
+/* 📝 Input Fields */
+.contact-form input,
+.contact-form textarea {
+  width: 100%;
+  padding: 12px;
+  border: 2px solid #3d94f7;
+  border-radius: 8px;
+  font-size: 1rem;
+  transition: border-color 0.3s ease-in-out;
+  color: #333;
+  background-color: #f9f9f9;
+}
+
+.contact-form input:focus,
+.contact-form textarea:focus {
+  border-color: #4f46e5;
+  outline: none;
+  background-color: #fff;
+}
+
+/* 📩 Animated Send Button */
+.contact-form button {
+  width: 100%;
+  padding: 12px;
+  background: #4f46e5;
+  color: white;
+  font-size: 1.2rem;
+  font-weight: bold;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: all 0.3s ease-in-out;
+}
+
+.contact-form button:hover {
+  background: #3730a3;
+}
+
+/* 💬 Success & Error Messages */
+#responseMessage {
+  margin-top: 10px;
+  font-size: 1.2rem;
+  padding: 10px;
+  border-radius: 8px;
+  display: none;
+}
+
+.success {
+  background-color: #4CAF50;
+  color: white;
+}
+
+.error {
+  background-color: #FF5733;
+  color: white;
+}
+</style>
+</main>
+
+<!-- 🌟 Footer Section -->
+<footer class="footer">
+  <div class="footer-content">
+    <p>&copy; 2025 <span class="glitter-text">Iyonicorp</span>. All rights reserved.</p>
+  </div>
+</footer>
+
+  <script>
+    document.addEventListener("DOMContentLoaded", function () {
+      const sections = document.querySelectorAll(".fade-in");
+
+      const observer = new IntersectionObserver(
+        (entries) => {
+          entries.forEach((entry) => {
+            if (entry.isIntersecting) {
+              entry.target.classList.add("animate-visible");
+            } else {
+              entry.target.classList.remove("animate-visible"); // Reset for continuous animation
+            }
+          });
+        },
+        { threshold: 0.2 }
+      );
+
+      sections.forEach((section) => observer.observe(section));
+    });
+
+    document.addEventListener("DOMContentLoaded", function () {
+      const menuButton = document.querySelector(".menu-button");
+      const mobileMenu = document.querySelector(".mobile-menu");
+
+      menuButton.addEventListener("click", function () {
+        mobileMenu.classList.toggle("active");
+      });
+    });
+
+    document.addEventListener("DOMContentLoaded", function () {
+      const ratingGroups = document.querySelectorAll(".stars");
+      const popup = document.getElementById("popup");
+
+      // Iterate through each rating group (each set of stars)
+      ratingGroups.forEach((group) => {
+        const stars = group.querySelectorAll("span");
+
+        // Click event for each star
+        stars.forEach((star, index) => {
+          star.addEventListener("click", function () {
+            // Remove shaking effect for clicked and previous stars
+            stars.forEach((s, i) => {
+              if (i <= index) {
+                s.classList.add("active");
+                s.classList.remove("shaking");
+              }
+            });
+
+            // Show thank you popup
+            popup.classList.add("show");
+
+            // Hide popup after 2 seconds
+            setTimeout(() => {
+              popup.classList.remove("show");
+            }, 2000);
+          });
+        });
+      });
+    });
+
+    document.getElementById("contactForm").addEventListener("submit", async function(event) {
+      event.preventDefault();
+
+      const name = document.getElementById("name").value;
+      const email = document.getElementById("email").value;
+      const message = document.getElementById("message").value;
+      const responseMessage = document.getElementById("responseMessage");
+
+      try {
+        const response = await fetch("http://localhost:5000/send-email", {
+          method: "POST",
+          headers: {
+            "Content-Type": "application/json"
+          },
+          body: JSON.stringify({ name, email, message })
+        });
+
+        const data = await response.json();
+
+        if (data.success) {
+          responseMessage.textContent = "✅ Message sent successfully!";
+          responseMessage.className = "success";
+          document.getElementById("contactForm").reset();
+        } else {
+          responseMessage.textContent = "❌ Failed to send message. Try again!";
+          responseMessage.className = "error";
+        }
+
+        responseMessage.style.display = "block";
+        setTimeout(() => { responseMessage.style.display = "none"; }, 3000);
+        
+      } catch (error) {
+        responseMessage.textContent = "❌ Error sending message.";
+        responseMessage.className = "error";
+        responseMessage.style.display = "block";
+      }
+    });
+  </script>
+
+</body>
+</html>
