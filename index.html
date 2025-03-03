@@ -6,13 +6,13 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   
   <!-- 🌟 Title - The Most Important SEO Element -->
-  <title>Iyonicorp | Digital Solutions - Web Development, AI Automation & SEO</title>
+  <title>Iyonicorp | Comprehensive Digital Solutions for Web Development, AI, SEO, and More</title>
 
   <!-- 📝 Meta Description (160 Characters) - Boost Google Ranking -->
   <meta name="description" content="Iyonicorp is your #1 partner for web development, AI automation, SEO, digital marketing, lead generation, chatbot development, and social media automation. We help businesses grow online!">
 
   <!-- 🔑 Meta Keywords - Includes the Most Searched Business Terms -->
-  <meta name="keywords" content="Web Development, Digital Marketing, AI Automation, SEO Services, Social Media Automation, Lead Generation, Affiliate Marketing, Chatbot Creation, Business Growth, Content Creation, Branding, Website Design, PPC Advertising, Online Traffic, Small Business SEO, Business Optimization, Microsoft Bing Optimization, Rank on Google, Google SEO, E-commerce Solutions, Local SEO, Best Business Websites">
+  <meta name="keywords" content="Web Development, Digital Marketing, AI Automation, SEO Services, Social Media Automation, Lead Generation, Affiliate Marketing, Chatbot Creation, Business Growth, Content Creation, Branding, Website Design, PPC Advertising, Online Traffic, Small Business SEO, Business Optimization, Microsoft Bing Optimization, Rank on Google, Google SEO, E-commerce Solutions, Local SEO, Best Business Websites, iyonicorp, ionicorp, ioniccorp, iyoni corp, iyonicorp.com">
 
   <!-- 📌 Author -->
   <meta name="author" content="Iyonicorp Team">
@@ -28,7 +28,7 @@
   <!-- 🌐 Open Graph (OG) for Social Media Sharing -->
   <meta property="og:title" content="Iyonicorp | Digital Solutions - Web Development, AI & SEO">
   <meta property="og:description" content="We offer expert web development, AI automation, SEO, digital marketing, and business growth solutions.">
-  <meta property="og:image" content="https://imgur.com/a/lFfJGig">
+  <meta property="og:image" content="https://i.imgur.com/mGMiiSM.png">
   <meta property="og:url" content="https://www.iyonicorp.com/">
   <meta property="og:type" content="website">
 
@@ -36,7 +36,7 @@
   <meta name="twitter:card" content="summary_large_image">
   <meta name="twitter:title" content="Iyonicorp | Digital Solutions - Web Development, AI & SEO">
   <meta name="twitter:description" content="Expert digital solutions: web design, SEO, AI automation, and marketing for businesses.">
-  <meta name="twitter:image" content="https://imgur.com/a/lFfJGig">
+  <meta name="twitter:image" content="https://i.imgur.com/mGMiiSM.png">
 
   <!-- 🔍 Google Site Verification (Add Your Google Search Console Verification) -->
   <meta name="google-site-verification" content="Dy076_18Gi3ryC5kVpLVUWzZ8y4mnsHQUEE8a_UAyEo" />
@@ -69,7 +69,7 @@
   </script>
 
   <!-- 🖼️ Favicon (Website Icon) -->
-  <link rel="icon" href="https://imgur.com/a/vSZDfdX" type="image/x-icon">
+  <link rel="icon" href="https://i.imgur.com/mGMiiSM.png" type="image/x-icon">
   <script src="https://cdn.tailwindcss.com"></script>
   <!-- Add Animation CSS -->
 <style>
@@ -749,7 +749,7 @@
       <div class="p-6 flex flex-col justify-center text-center md:text-left">
         <h4 class="text-3xl font-bold text-indigo-600">🌍 Web Development & SEO</h4>
         <p class="mt-4 text-gray-600">We build stunning, **high-performance websites** optimized for SEO, ensuring that your business stands out online.</p>
-        <a href="https://yourwebsite.com/web-development" class="mt-6 inline-block bg-indigo-600 text-white px-6 py-3 rounded-full font-semibold blinking-btn">Explore More</a>
+        <a href="https://web.iyonicorp.com/" class="mt-6 inline-block bg-indigo-600 text-white px-6 py-3 rounded-full font-semibold blinking-btn">Explore More</a>
       </div>
     </div>
   </section>
@@ -1210,7 +1210,7 @@
       const responseMessage = document.getElementById("responseMessage");
 
       try {
-        const response = await fetch("http://localhost:5000/send-email", {
+        const response = await fetch("https://iyonicorp.onrender.com/send-email", {
           method: "POST",
           headers: {
             "Content-Type": "application/json"
@@ -1239,6 +1239,84 @@
       }
     });
   </script>
+<!-- Google tag (gtag.js) -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-8TDD56RPJC"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'G-8TDD56RPJC');
+  
+</script>
+<script>
+  (function() {
+    // 🔥 Disable Right-Click
+    document.addEventListener("contextmenu", function(event) {
+      event.preventDefault();
+    });
+
+    // 🔒 Block F12, Ctrl+Shift+I, Ctrl+Shift+J, Ctrl+U
+    document.addEventListener("keydown", function(event) {
+      if (event.keyCode == 123) { // F12
+        event.preventDefault();
+      }
+      if (event.ctrlKey && event.shiftKey && (event.keyCode == 73 || event.keyCode == 74)) { // Ctrl+Shift+I / J
+        event.preventDefault();
+      }
+      if (event.ctrlKey && event.keyCode == 85) { // Ctrl+U
+        event.preventDefault();
+      }
+    });
+
+    // 🚨 Detect DevTools Opened
+    function detectDevTools() {
+      let devtoolsOpen = false;
+
+      const before = new Date();
+      debugger;
+      const after = new Date();
+
+      if (after - before > 100) {
+        devtoolsOpen = true;
+      }
+
+      if (devtoolsOpen) {
+        document.body.innerHTML = `<div style="text-align:center; font-size:24px; font-weight:bold; color:red; margin-top:50px;">
+          🚨 ERROR: DevTools Detected! Please close DevTools to access this website. 🚨
+        </div>`;
+      }
+    }
+
+    setInterval(detectDevTools, 1000);
+        // ❌ Prevent XSS Attacks (Sanitize Input Fields)
+        document.querySelectorAll("input, textarea").forEach((element) => {
+      element.addEventListener("input", function() {
+        this.value = this.value.replace(/</g, "&lt;").replace(/>/g, "&gt;");
+      });
+    });
+
+    // 🌍 Detect VPN or Proxy Usage
+    async function detectVPN() {
+      try {
+        const response = await fetch("https://ipapi.co/json/");
+        const data = await response.json();
+
+        // Check if VPN/proxy is detected (Some IP services provide this information)
+        if (data.security && data.security.vpn) {
+          document.body.innerHTML = `<div style="text-align:center; font-size:24px; font-weight:bold; color:red; margin-top:50px;">
+            🚨 ERROR: VPN/Proxy Detected! Please disable VPN to access this website. 🚨
+          </div>`;
+        }
+      } catch (error) {
+        console.log("VPN detection error:", error);
+      }
+    }
+
+    detectVPN();
+
+  })();
+</script>
 
 </body>
 </html>
