@@ -1,1 +1,35 @@
-AddType text/plain .well-known/apple-developer-merchantid-domain-association
+# Enable Rewrite Engine
+RewriteEngine On
+
+# Allow access to .well-known/apple-developer-merchantid-domain-association
+RewriteCond %{REQUEST_URI} ^/.well-known/apple-developer-merchantid-domain-association$ [NC]
+RewriteRule .* - [L]
+
+# Ensure the correct MIME type (Content-Type: text/plain)
+<FilesMatch "apple-developer-merchantid-domain-association">
+    ForceType text/plain
+    Header set Content-Type "text/plain"
+</FilesMatch>
+
+# Prevent .well-known folder from being blocked by other rules
+<Directory "/.well-known">
+    AllowOverride None
+    Require all granted
+</Directory>
+
+# Disable caching for verification file to ensure immediate updates
+<Files "apple-developer-merchantid-domain-association">
+    FileETag None
+    Header unset ETag
+    Header set Cache-Control "max-age=0, no-cache, no-store, must-revalidate"
+    Header set Pragma "no-cache"
+    Header set Expires "Wed, 11 Jan 1984 05:00:00 GMT"
+</Files>
+
+# Fix for Cloudflare / Security plugins that might block access
+Header always set X-Content-Type-Options "nosniff"
+
+# Standard Rewrite Rules for Pretty URLs (if needed)
+RewriteCond %{REQUEST_FILENAME} !-f
+RewriteCond %{REQUEST_FILENAME} !-d
+RewriteRule . /index.php [L]
