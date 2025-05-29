@@ -4,37 +4,37 @@
   <!-- ✅ Basic Meta -->
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<<<<<<< HEAD
+
   
   <!-- 🌟 Title - The Most Important SEO Element -->
   <title>Iyonicorp info | Comprehensive Digital Solutions for Web Development, AI, SEO, and More</title>
-=======
+  <link rel="canonical" href="https://info.iyonicorp.com/">
   <title>Iyonicorp Info Hub | Official Guide to Services, Operations & Innovations</title>
 <meta name="description" content="Discover Iyonicorp's full range of digital services including website rentals, domain hosting, AI automation, SEO optimization, crypto trading dashboards, chatbot creation, marketing tools, and business growth solutions. Explore everything Iyonicorp offers to power your online presence.">
 <meta name="keywords" content="Iyonicorp, Iyonicorp Info, Iyonicorp Services, Iyonicorp Digital Solutions, Iyonicorp Website Rental, Iyonicorp Hosting, Iyonicorp Domains, Iyonicorp Docs, Iyonicorp Support, Iyonicorp Dashboard, Iyonicorp Crypto Tools, Iyonicorp Pay, Iyonicorp AI, Iyonicorp Automation, Iyonicorp Marketing, Iyonicorp SEO, Iyonicorp Blog, Iyonicorp Analytics, Iyonicorp Help Center, Iyonicorp Subscription, Iyonicorp Web Tools, Web Rental Platform, AI Automation Tools, SEO Optimization, Digital Marketing, Domain Purchase, Connect Domain, Chatbot Development, Crypto Signals, Business Website Builder, Social Media Automation, Online Business Tools, Rank on Google, Rank on Bing, PPC Marketing, Content Automation, Branding Solutions, Custom Sites, Ecommerce Platforms, Real Estate Templates, Cannabis Store Websites, Blog Templates, Admin Dashboard, Support System, Online Payments, Paystack Integration, Website Monetization, Portfolio Websites, Small Business Websites">
->>>>>>> ca7dd1e (L)
+
 
   <!-- 🧠 Author & Robots -->
   <meta name="author" content="Iyonicorp">
   <meta name="robots" content="index, follow">
 
-<<<<<<< HEAD
+
   <!-- 🌍 Canonical URL - Prevent Duplicate Content Issues -->
   <link rel="canonical" href="https://www.info.iyonicorp.com//">
-=======
+  <link rel="canonical" href="https://info.iyonicorp.com/">
   <!-- 🌐 Canonical -->
   <link rel="canonical" href="https://info.iyonicorp.com/">
->>>>>>> ca7dd1e (L)
+
 
   <!-- 🔍 Open Graph -->
   <meta property="og:title" content="Iyonicorp Info Hub">
   <meta property="og:description" content="The official info site for Iyonicorp's operations and digital services.">
   <meta property="og:image" content="https://i.imgur.com/mGMiiSM.png">
-<<<<<<< HEAD
+
   <meta property="og:url" content="https://www.info.iyonicorp.com/">
-=======
+  <link rel="canonical" href="https://info.iyonicorp.com/">
   <meta property="og:url" content="https://info.iyonicorp.com/">
->>>>>>> ca7dd1e (L)
+
   <meta property="og:type" content="website">
 
   <!-- 🐦 Twitter -->
@@ -43,7 +43,7 @@
   <meta name="twitter:description" content="Explore all Iyonicorp systems, tools, and platform operations.">
   <meta name="twitter:image" content="https://i.imgur.com/mGMiiSM.png">
 
-<<<<<<< HEAD
+
 
   <!-- 🚀 Schema Markup (Structured Data for Search Engines) -->
   <script type="application/ld+json">
@@ -66,7 +66,7 @@
       "https://www.twitter.com/iyonicorp",
       "https://www.linkedin.com/company/iyonicorp"
     ]
-=======
+    <link rel="canonical" href="https://info.iyonicorp.com/">
   <!-- 🔗 Schema -->
   <script type="application/ld+json">
   {
@@ -83,7 +83,7 @@
         "url": "https://i.imgur.com/mGMiiSM.png"
       }
     }
->>>>>>> ca7dd1e (L)
+
   }
   </script>
 
@@ -812,18 +812,72 @@
       </div>
     </div>
   </section>
-  
-  <!-- Service 5: Affiliate Marketing & Passive Income -->
+  <!-- Service 5: Email Marketing (Launching Soon) -->
   <section class="bg-white shadow-lg rounded-lg mt-12 overflow-hidden fade-in scattered-layout">
     <div class="md:flex">
-      <img src="pexels-olly-3761509.jpg" alt="Affiliate Marketing" class="w-full md:w-1/2 img-border">
+      <img src="https://media.sproutsocial.com/uploads/2021/07/email-marketing-featured-image.svg" alt="Email Marketing" class="w-full md:w-1/2 img-border">
       <div class="p-6 flex flex-col justify-center text-center md:text-left">
-        <h4 class="text-3xl font-bold text-indigo-600">💰 Affiliate & Passive Income</h4>
-        <p class="mt-4 text-gray-600">We help businesses monetize their platforms by implementing smart affiliate marketing strategies for passive income.</p>
-        <a href="https://yourwebsite.com/affiliate-marketing" class="mt-6 inline-block bg-indigo-600 text-white px-6 py-3 rounded-full font-semibold blinking-btn">Start Earning</a>
+        <h4 class="text-3xl font-bold text-indigo-600">Email Marketing</h4>
+        <p class="mt-4 text-gray-600">
+          Supercharge your business with our advanced email marketing platform—automated campaigns, analytics, and more. <br>
+          <span class="font-semibold text-indigo-500">3 days remaining!</span>
+        </p>
+        <button id="emailMarketingBtn" class="mt-6 inline-block bg-gray-400 text-white px-6 py-3 rounded-full font-semibold blinking-btn cursor-not-allowed opacity-60" disabled>
+          Launching Soon <span id="emailTimer" class="ml-2"></span>
+        </button>
       </div>
     </div>
   </section>
+  <script>
+    // Countdown Timer for Email Marketing Launch
+    // Timer will only start when the button is hovered or focused
+    (function() {
+      // Set launch date (3 days from now)
+      const launchDate = new Date(Date.now() + 3 * 24 * 60 * 60 * 1000);
+      let timerStarted = false;
+      let timerId = null;
+
+      function updateTimer() {
+        const now = new Date();
+        const diff = launchDate - now;
+
+        if (diff <= 0) {
+          document.getElementById("emailTimer").textContent = "Now Live!";
+          const btn = document.getElementById("emailMarketingBtn");
+          btn.textContent = "Try Now";
+          btn.classList.remove("bg-gray-400", "cursor-not-allowed", "opacity-60");
+          btn.classList.add("bg-indigo-600", "hover:bg-indigo-700");
+          btn.disabled = false;
+          btn.onclick = function() { window.location.href = "https://yourwebsite.com/email-marketing"; };
+          return;
+        }
+
+        const days = Math.floor(diff / (1000 * 60 * 60 * 24));
+        const hours = Math.floor((diff / (1000 * 60 * 60)) % 24);
+        const minutes = Math.floor((diff / (1000 * 60)) % 60);
+        const seconds = Math.floor((diff / 1000) % 60);
+
+        document.getElementById("emailTimer").textContent =
+          `${days}d ${hours}h ${minutes}m ${seconds}s`;
+        timerId = setTimeout(updateTimer, 1000);
+      }
+
+      function startTimerOnce() {
+        if (!timerStarted) {
+          timerStarted = true;
+          updateTimer();
+        }
+      }
+
+      document.addEventListener("DOMContentLoaded", function() {
+        const btn = document.getElementById("emailMarketingBtn");
+        if (btn) {
+          btn.addEventListener("mouseenter", startTimerOnce);
+          btn.addEventListener("focus", startTimerOnce);
+        }
+      });
+    })();
+  </script>
 
    <!-- Service 4: Social Media Automation -->
    <section class="bg-gray-200 shadow-lg rounded-lg mt-12 overflow-hidden fade-in scattered-layout">
@@ -832,11 +886,8 @@
       <div class="p-6 flex flex-col justify-center text-center md:text-left">
         <h4 class="text-3xl font-bold text-indigo-600">💳 Payment Solutions Providers</h4>
           <p class="mt-4 text-gray-600">We offer seamless and secure payment solutions to help businesses streamline transactions and enhance customer experience.</p>
-<<<<<<< HEAD
-          <a href="https://yourwebsite.com/payment-solutions" class="mt-6 inline-block bg-indigo-600 text-white px-6 py-3 rounded-full font-semibold blinking-btn">Discover More</a>
-=======
           <a href="https://pay.iyonicorp.com/" class="mt-6 inline-block bg-indigo-600 text-white px-6 py-3 rounded-full font-semibold blinking-btn">Discover More</a>
->>>>>>> ca7dd1e (L)
+
         </div>
     </div>
   </section>
