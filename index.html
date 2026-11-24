@@ -1,475 +1,62 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Iyonicorp Info — Company Overview & Services</title>
-  <meta name="description" content="Official information hub for Iyonicorp. Discover company details, services, team, and contact info.">
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#f5f7f1">
+  <meta name="description" content="Iyonicorp brings storefronts, payments, customer relationships, and everyday work into one connected ecosystem. Explore IyonicBiz, Shop, Pay, Intelligence, DB, Mailer, and Space.">
   <link rel="canonical" href="https://info.iyonicorp.com/">
-  <meta name="robots" content="index, follow">
-  <meta property="og:title" content="Iyonicorp Info — Company Overview & Services">
-  <meta property="og:description" content="Learn about Iyonicorp: company background, services, team, and how to get in touch.">
-  <meta property="og:image" content="https://i.imgur.com/mGMiiSM.png">
-  <meta property="og:url" content="https://info.iyonicorp.com/">
   <meta property="og:type" content="website">
-  <meta name="twitter:card" content="summary_large_image">
-  <meta name="twitter:title" content="Iyonicorp Info — Company Overview & Services">
-  <meta name="twitter:description" content="Explore official information about Iyonicorp, including services, team, and contact details.">
-  <meta name="twitter:image" content="https://i.imgur.com/mGMiiSM.png">
-  <link rel="icon" href="https://i.imgur.com/mGMiiSM.png" type="image/png">
-  <script src="https://cdn.tailwindcss.com"></script>
+  <meta property="og:title" content="Iyonicorp — The business toolkit for what’s next">
+  <meta property="og:description" content="Seven focused products. One connected ecosystem for builders, operators, and teams.">
+  <meta property="og:url" content="https://info.iyonicorp.com/">
+  <title>Iyonicorp — The business toolkit for what’s next</title>
   <style>
-    :root{--glass:rgba(255,255,255,0.08);--stroke:rgba(255,255,255,0.2);--neon:#7c3aed;--neon2:#22d3ee;--ink:#0b1020;}
-    html,body{height:100%}
-    body{
-      margin:0;
-      background: radial-gradient(1200px 1200px at 10% 10%, #0f172a, #0b1020 60%), linear-gradient(120deg,#0b1020,#0f172a);
-      color:#e5e7eb;
-      overflow-x:hidden;
-    }
-    .animated-bg{
-      position:fixed;inset:0;z-index:-2;
-      background: linear-gradient(120deg,rgba(124,58,237,.25),rgba(34,211,238,.15),rgba(59,130,246,.15));
-      filter: blur(60px);
-      animation: hue 15s linear infinite;
-    }
-    @keyframes hue{0%{filter:hue-rotate(0deg) blur(60px)}100%{filter:hue-rotate(360deg) blur(60px)}}
-    .glass{
-      background: var(--glass);
-      border:1px solid var(--stroke);
-      backdrop-filter: blur(10px);
-      -webkit-backdrop-filter: blur(10px);
-      box-shadow: 0 0 0 1px rgba(255,255,255,0.05) inset, 0 10px 30px rgba(0,0,0,0.35);
-    }
-    .brand{
-      font-weight:800;letter-spacing:.12em;
-      text-transform:uppercase;
-      color:#fff;
-      text-shadow: 0 0 20px rgba(124,58,237,.8), 0 0 40px rgba(34,211,238,.8);
-    }
-    .neon-btn{
-      position:relative;overflow:hidden;
-      background:linear-gradient(90deg,var(--neon),var(--neon2));
-      color:#0b1020;
-      transition:transform .2s ease, box-shadow .2s ease;
-      box-shadow:0 10px 20px rgba(124,58,237,.25), 0 10px 30px rgba(34,211,238,.15);
-    }
-    .neon-btn:hover{transform:translateY(-2px) scale(1.02)}
-    .neon-ring{
-      position:absolute;inset:-2px;border-radius:9999px;
-      border:2px solid transparent;
-      background:linear-gradient(#0000,#0000),linear-gradient(90deg,var(--neon),var(--neon2));
-      background-clip:padding-box,border-box;
-    }
-    .reveal{opacity:0;transform:translateY(24px) scale(.98);transition:all .8s cubic-bezier(.2,.8,.2,1)}
-    .reveal.show{opacity:1;transform:translateY(0) scale(1)}
-    .tilt{transform-style:preserve-3d;transition:transform .2s ease}
-    .tilt .tilt-inner{transform:translateZ(30px)}
-    .hero-blob{
-      position:absolute;inset:auto auto -40px -40px;width:340px;height:340px;
-      background: radial-gradient(closest-side, rgba(124,58,237,.55), rgba(34,211,238,.35), transparent);
-      filter: blur(30px);
-      border-radius: 40% 60% 50% 50%/40% 40% 60% 60%;
-      animation: blob 12s ease-in-out infinite alternate;
-    }
-    @keyframes blob{to{border-radius:60% 40% 55% 45%/50% 60% 40% 50%; transform: translate(30px, -20px) rotate(8deg)}}
-    .marquee{display:flex;gap:48px;animation:mar 20s linear infinite;will-change:transform}
-    .marquee:hover{animation-play-state:paused}
-    @keyframes mar{from{transform:translateX(0)}to{transform:translateX(-50%)}}
-    .shadow-neon{box-shadow:0 0 0 1px rgba(255,255,255,0.05) inset, 0 20px 60px rgba(124,58,237,.15), 0 10px 30px rgba(34,211,238,.12)}
-    .star{cursor:pointer;font-size:1.75rem;color:#6b7280;transition:transform .15s ease,color .2s ease;display:inline-block}
-    .star.active{color:#fbbf24;transform:translateY(-2px)}
-    .popup{position:fixed;left:50%;bottom:28px;transform:translateX(-50%);background:linear-gradient(90deg,var(--neon),var(--neon2));color:#0b1020;padding:.75rem 1.25rem;border-radius:.75rem;box-shadow:0 10px 30px rgba(0,0,0,.35);opacity:0;pointer-events:none;transition:opacity .25s ease}
-    .popup.show{opacity:1}
-    #topBtn{position:fixed;right:16px;bottom:16px;opacity:0;pointer-events:none;transition:opacity .25s ease, transform .25s ease}
-    #topBtn.visible{opacity:1;pointer-events:auto;transform:translateY(0)}
-    canvas#particles{position:fixed;inset:0;z-index:-1}
-    .nav-blur{backdrop-filter:saturate(140%) blur(8px);-webkit-backdrop-filter:saturate(140%) blur(8px)}
+    :root{color-scheme:light;--paper:#f5f7f1;--soft:#edf2e9;--ink:#17231e;--muted:#63716a;--line:#dce4da;--green:#173b30;--green2:#234f3d;--lime:#c4f35c;--leaf:#6ba34c;--blue:#6c72eb;--serif:Georgia,"Times New Roman",serif;--sans:Inter,ui-sans-serif,system-ui,-apple-system,BlinkMacSystemFont,"Segoe UI",sans-serif}
+    *{box-sizing:border-box}html{scroll-behavior:smooth;scroll-padding-top:90px}body{margin:0;background:var(--paper);color:var(--ink);font:15px/1.65 var(--sans);-webkit-font-smoothing:antialiased}a{color:inherit;text-decoration:none}button{font:inherit}.wrap{width:min(1280px,calc(100% - 64px));margin:auto}.skip{position:absolute;top:8px;left:-1000px;z-index:40;padding:12px;background:#fff}.skip:focus{left:8px}.header{position:sticky;top:0;z-index:20;background:rgba(245,247,241,.91);backdrop-filter:blur(14px);border-bottom:1px solid #17231e0c}.nav{height:76px;display:flex;align-items:center;justify-content:space-between}.brand{display:inline-flex;align-items:center;gap:11px;font-size:.91rem;font-weight:780;letter-spacing:.04em}.brand-mark{width:30px;height:30px;border-radius:11px;display:grid;place-items:center;background:#caf3a5;color:#173b30;font-weight:850;font-size:1.1rem;letter-spacing:-.06em}.nav-center{display:flex;gap:30px;color:#64716a;font-size:.83rem}.nav-right{display:flex;align-items:center;gap:23px;color:#526158;font-size:.83rem}.button{display:inline-flex;align-items:center;justify-content:center;gap:12px;background:var(--ink);color:#fff;padding:13px 19px;border-radius:8px;font-weight:680;font-size:.83rem;transition:transform .2s,background .2s}.button:hover{transform:translateY(-2px);background:#315441}.button.light{background:var(--lime);color:var(--ink)}.button.light:hover{background:#d4ff7a}.button.quiet{background:transparent;color:var(--green2);padding-left:0}.menu-button{display:none;width:42px;height:42px;border:1px solid var(--line);border-radius:50%;background:#fff;color:var(--ink);font-size:1.2rem}
+    .button.secondary{background:transparent;border:1px solid #cad5c9;color:var(--ink)}.button.secondary:hover{background:#fff;color:var(--ink)}.hero{padding:85px 0 70px}.hero-grid{display:grid;grid-template-columns:.93fr 1.07fr;gap:48px;align-items:center}.kicker{font-size:.67rem;font-weight:760;letter-spacing:.17em;text-transform:uppercase;color:#758979;display:flex;align-items:center;gap:10px}.kicker:before{content:"";width:10px;height:10px;border-radius:50%;background:#8fce67;box-shadow:0 0 0 5px #8fce671b}.hero h1{font-size:clamp(3.4rem,6.7vw,6.2rem);line-height:.96;letter-spacing:-.075em;margin:27px 0 21px;max-width:660px;font-weight:660}.hero h1 em{font-style:normal;color:var(--leaf)}.hero-copy{max-width:560px;color:var(--muted);font-size:1.06rem;line-height:1.8;margin:0}.hero-actions{display:flex;align-items:center;gap:22px;flex-wrap:wrap;margin-top:31px}.hero-actions .text-action{font-size:.83rem;font-weight:650;color:#56764a}.secure-note{margin-top:27px;display:flex;align-items:center;gap:9px;color:#849087;font-size:.72rem}.secure-note svg{width:15px;color:var(--leaf)}
+    .visual{position:relative;min-height:465px;display:grid;place-items:center;isolation:isolate}.visual:before{content:"";position:absolute;width:380px;height:380px;border:1px solid #d9e8d1;border-radius:50%;z-index:-1}.visual:after{content:"";position:absolute;width:300px;height:300px;border:1px solid #e1ebdb;border-radius:50%;z-index:-1}.dashboard{width:min(100%,510px);min-height:322px;background:#fff;border:1px solid #e3e9e1;border-radius:21px;box-shadow:0 32px 80px #20382915;transform:rotate(-2.3deg);overflow:hidden}.dash-bar{height:47px;border-bottom:1px solid #edf0eb;display:flex;align-items:center;padding:0 16px;gap:6px;color:#78867d;font-size:.62rem}.dot{width:6px;height:6px;background:#d9e5d4;border-radius:50%}.dash-name{margin:auto;font-size:.6rem;color:#718073}.dash-spark{width:34px;height:34px;border-radius:12px;background:#eff7e9;color:var(--leaf);display:grid;place-items:center;font-size:1.1rem}.dash-content{padding:22px 24px}.dash-label{font-size:.58rem;letter-spacing:.14em;color:#94a097;text-transform:uppercase}.dash-title{font-size:1.1rem;font-weight:680;color:#304237;margin:3px 0 17px}.dash-row{display:grid;grid-template-columns:1fr 1fr;gap:10px}.dash-tile{min-height:91px;border-radius:13px;background:#f0f5eb;padding:14px}.dash-tile:nth-child(2){background:#eff0ff}.dash-tile:nth-child(3){background:#f9eff5;grid-column:span 2;min-height:65px;display:flex;align-items:center;justify-content:space-between}.tile-icon{width:30px;height:30px;border-radius:9px;background:#dcebd3;color:#638a4d;display:grid;place-items:center;font-size:.83rem}.dash-tile:nth-child(2) .tile-icon{background:#dfe2ff;color:#6670ce}.dash-tile:nth-child(3) .tile-icon{background:#f0dce7;color:#a66385}.tile-title{margin-top:7px;font-size:.74rem;font-weight:700;color:#425147}.tile-sub{font-size:.62rem;color:#869288}.dash-tile:nth-child(3) .tile-title{margin:0}.dash-tile:nth-child(3) .tile-sub{margin-left:auto;margin-right:9px}.floating-note{position:absolute;padding:12px 15px;background:#fff;border:1px solid #e7eee4;border-radius:12px;box-shadow:0 16px 30px #20382910;font-size:.66rem;font-weight:650;color:#435447;display:flex;align-items:center;gap:9px}.floating-note .check{width:18px;height:18px;border-radius:6px;background:#edf6e6;color:#6d9d53;display:grid;place-items:center}.note-a{right:-3px;bottom:83px}.note-b{left:8px;top:120px}.note-b .check{background:#fff0e9;color:#b66c48}.visual-caption{position:absolute;bottom:7px;right:3px;color:#758879;font-size:.61rem;letter-spacing:.14em;text-transform:uppercase}
+    .capability-bar{border-top:1px solid var(--line);border-bottom:1px solid var(--line);padding:18px 0}.capabilities{display:grid;grid-template-columns:1.2fr repeat(5,1fr);align-items:center;gap:14px;color:#607267}.capabilities span{display:flex;align-items:center;justify-content:center;gap:9px;font-size:.65rem;font-weight:720;letter-spacing:.08em;text-transform:uppercase;white-space:nowrap}.capabilities span:first-child{justify-content:flex-start;color:#87948a}.capabilities i{font-style:normal;color:var(--leaf);font-size:1rem}
+    .section{padding:106px 0}.section-head{display:grid;grid-template-columns:1fr .8fr;gap:35px;align-items:end;margin-bottom:37px}.section-head h2{font-size:clamp(2.8rem,5.5vw,5rem);letter-spacing:-.07em;line-height:1.02;margin:15px 0 0;font-weight:570}.section-head h2 em{font-style:normal;color:var(--leaf)}.section-head p{margin:0 0 5px;max-width:460px;color:var(--muted);font-size:.93rem}.products-section{background:#edf2e9}.product-grid{display:grid;grid-template-columns:repeat(12,1fr);gap:14px}.product-card{position:relative;grid-column:span 4;min-height:218px;border:1px solid #dce5da;background:#fbfcf8;border-radius:13px;padding:22px;display:flex;flex-direction:column;overflow:hidden;transition:transform .2s,border-color .2s}.product-card:hover{transform:translateY(-3px);border-color:#a7bb9d}.product-card.featured{grid-column:span 6;min-height:250px}.product-card .number{position:absolute;top:21px;right:21px;color:#a5afa5;font-size:.61rem;letter-spacing:.1em}.product-icon{width:42px;height:42px;border-radius:13px;background:#e7f2dd;color:#578544;display:grid;place-items:center;font-size:1.03rem}.product-card:nth-child(2) .product-icon{background:#f8e8dc;color:#aa6948}.product-card:nth-child(3) .product-icon{background:#e7eaff;color:#6570d4}.product-card:nth-child(4) .product-icon{background:#ece6ff;color:#7865bc}.product-card:nth-child(5) .product-icon{background:#deeee8;color:#45846f}.product-card:nth-child(6) .product-icon{background:#f6e4ec;color:#aa6685}.product-card:nth-child(7) .product-icon{background:#f4eddb;color:#997848}.product-type{font-size:.57rem;font-weight:760;letter-spacing:.15em;text-transform:uppercase;color:#7c8a80;margin-top:19px}.product-card h3{font-size:1.17rem;letter-spacing:-.035em;margin:4px 0 5px;font-weight:700}.product-card p{font-size:.78rem;color:var(--muted);line-height:1.6;margin:0;max-width:390px}.product-card a{margin-top:auto;padding-top:14px;font-size:.73rem;color:var(--green2);font-weight:750}.product-card a span{margin-left:6px}.product-card.featured h3{font-size:1.48rem}.ecosystem{background:var(--green);color:#f7f7ef;overflow:hidden}.ecosystem-grid{display:grid;grid-template-columns:.95fr 1.05fr;gap:60px;align-items:center}.ecosystem h2{font-size:clamp(2.7rem,5vw,4.7rem);line-height:1.02;letter-spacing:-.07em;font-weight:520;margin:18px 0}.ecosystem h2 em{font-family:var(--serif);font-weight:400;color:#c7f57a}.ecosystem-copy{max-width:520px;color:#c3d1c8;font-size:.94rem}.ecosystem .kicker{color:#b7cab8}.product-orbit{min-height:350px;position:relative;display:grid;place-items:center}.orbit-lines{position:absolute;width:320px;height:320px;border:1px solid #ffffff25;border-radius:50%;box-shadow:0 0 0 38px #ffffff08,0 0 0 78px #ffffff05}.orbit-center{width:92px;height:92px;border:1px solid #ffffff55;border-radius:27px;background:#ffffff12;display:grid;place-items:center;font-weight:800;letter-spacing:.04em;color:var(--lime);transform:rotate(-7deg)}.orbit-product{position:absolute;min-width:118px;padding:11px 13px;border-radius:10px;background:#f5f7f1;color:#284436;font-size:.68rem;font-weight:750;box-shadow:0 10px 24px #07180f35}.orbit-product small{display:block;font-size:.5rem;letter-spacing:.12em;text-transform:uppercase;color:#7e8e81;font-weight:650}.orbit-product.one{top:20px;left:calc(50% - 55px)}.orbit-product.two{top:100px;right:0}.orbit-product.three{bottom:36px;right:30px}.orbit-product.four{bottom:4px;left:calc(50% - 55px)}.orbit-product.five{bottom:36px;left:25px}.orbit-product.six{top:100px;left:0}.orbit-product.seven{top:40px;right:15px}
+    .company-section{background:#fafbf7}.company-grid{display:grid;grid-template-columns:.7fr 1.3fr;gap:65px}.company-statement{font-family:var(--serif);font-size:2.15rem;line-height:1.22;letter-spacing:-.04em;margin:0}.company-detail{color:var(--muted);max-width:680px}.company-detail p{margin:0 0 16px}.company-facts{display:flex;gap:12px;flex-wrap:wrap;margin-top:25px}.company-facts span{border:1px solid var(--line);border-radius:999px;padding:8px 13px;font-size:.72rem;color:#617268}.contact-band{padding:72px 0;background:#eaf0e5}.contact-grid{display:flex;justify-content:space-between;align-items:center;gap:40px}.contact-grid h2{font-size:clamp(2.5rem,4.3vw,4.2rem);line-height:1;letter-spacing:-.07em;font-weight:560;margin:14px 0}.contact-grid p{color:var(--muted);margin:0;max-width:500px}.contact-actions{display:flex;gap:12px;flex-wrap:wrap}.contact-actions .button.secondary{border:1px solid #d1dccd;color:var(--ink);background:transparent}.footer{padding:28px 0}.footer-top{display:flex;justify-content:space-between;gap:28px;align-items:flex-start;padding-bottom:26px;border-bottom:1px solid var(--line)}.footer-summary{color:var(--muted);font-size:.78rem;max-width:380px;margin:12px 0 0}.footer-links{display:flex;gap:25px;flex-wrap:wrap;font-size:.76rem;color:#596b5e}.copyright{display:flex;justify-content:space-between;gap:20px;padding-top:18px;color:#879289;font-size:.68rem}
+    :focus-visible{outline:3px solid var(--blue);outline-offset:3px;border-radius:5px}@media(max-width:900px){.hero-grid{grid-template-columns:1fr 1fr;gap:25px}.hero h1{font-size:clamp(3rem,7vw,5rem)}.visual{min-height:400px}.dashboard{transform:scale(.92) rotate(-2deg)}.note-a{right:-8px}.note-b{left:-8px}.capabilities{grid-template-columns:repeat(5,1fr)}.capabilities span:first-child{display:none}.ecosystem-grid{gap:30px}.product-orbit{transform:scale(.88)}}@media(max-width:680px){.wrap{width:min(100% - 36px,540px)}.nav{height:66px}.nav-center,.nav-right{display:none}.menu-button{display:grid;place-items:center}.nav.mobile-open{position:relative}.nav.mobile-open .nav-center{position:absolute;display:flex;flex-direction:column;gap:0;left:-18px;right:-18px;top:66px;background:var(--paper);padding:10px 25px 17px;border-bottom:1px solid var(--line)}.nav.mobile-open .nav-center a{padding:11px 0}.hero{padding:52px 0 48px}.hero-grid{grid-template-columns:1fr;gap:25px}.hero h1{font-size:clamp(3.15rem,14vw,4.5rem);margin-top:19px}.hero-copy{font-size:.96rem}.hero-actions{gap:12px;margin-top:24px}.hero-actions .text-action{padding:8px 0}.visual{min-height:360px;margin:0 -7px}.visual:before{width:300px;height:300px}.visual:after{width:235px;height:235px}.dashboard{transform:scale(.77) rotate(-2deg);width:510px;max-width:none}.note-a{right:-3px;bottom:49px}.note-b{left:-5px;top:65px}.visual-caption{bottom:-7px}.capability-bar{padding:13px 0}.capabilities{display:flex;justify-content:space-between;gap:10px;overflow:hidden}.capabilities span{font-size:.55rem;letter-spacing:.03em;gap:5px}.section{padding:75px 0}.section-head{grid-template-columns:1fr;gap:15px;margin-bottom:26px}.section-head h2{font-size:clamp(2.6rem,12vw,3.7rem)}.section-head p{font-size:.88rem}.product-grid{display:flex;flex-direction:column}.product-card,.product-card.featured{min-height:205px}.product-card.featured h3{font-size:1.3rem}.ecosystem-grid{grid-template-columns:1fr;gap:8px}.ecosystem h2{font-size:3.1rem}.product-orbit{min-height:330px;transform:scale(.83);margin:-8px -40px}.company-grid{grid-template-columns:1fr;gap:20px}.company-statement{font-size:1.75rem}.contact-band{padding:58px 0}.contact-grid{align-items:flex-start;flex-direction:column;gap:23px}.contact-grid h2{font-size:3.2rem}.footer-top,.copyright{flex-direction:column;align-items:flex-start}.footer-links{gap:15px}.copyright{gap:7px}}@media(prefers-reduced-motion:reduce){*,*::before,*::after{scroll-behavior:auto!important;transition:none!important;animation:none!important}}
   </style>
+  <script type="application/ld+json">{"@context":"https://schema.org","@type":"Organization","name":"Iyonicorp","url":"https://iyonicorp.com/","email":"hello@iyonicorp.com","telephone":"+254113203900","address":{"@type":"PostalAddress","addressLocality":"Nairobi","addressCountry":"KE"},"description":"Iyonicorp brings storefronts, payments, customer relationships, and everyday work into one connected ecosystem."}</script>
 </head>
-<body class="antialiased selection:bg-fuchsia-500/30 selection:text-white">
-  <div class="animated-bg"></div>
-  <canvas id="particles"></canvas>
-
-  <header class="fixed top-0 left-0 right-0 z-40 nav-blur">
-    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-4 flex items-center justify-between">
-      <a href="#" class="brand text-xl sm:text-2xl">Iyonicorp</a>
-      <nav class="hidden md:flex items-center gap-8 text-sm text-slate-200">
-        <a href="#services" class="hover:text-white">Services</a>
-        <a href="#showcase" class="hover:text-white">Showcase</a>
-        <a href="#ratings" class="hover:text-white">Ratings</a>
-        <a href="#contact" class="hover:text-white">Contact</a>
-      </nav>
-      <button id="menuBtn" class="md:hidden glass px-3 py-2 rounded-lg text-slate-200">☰</button>
-    </div>
-    <div id="mobileMenu" class="md:hidden hidden px-4 pb-4">
-      <div class="glass rounded-xl p-4 flex flex-col gap-3">
-        <a class="hover:text-white" href="#services">Services</a>
-        <a class="hover:text-white" href="#showcase">Showcase</a>
-        <a class="hover:text-white" href="#ratings">Ratings</a>
-        <a class="hover:text-white" href="#contact">Contact</a>
-      </div>
-    </div>
-  </header>
-
-  <main class="pt-28">
-    <section class="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-      <div class="hero-blob"></div>
-      <div class="grid md:grid-cols-2 gap-10 items-center">
-        <div class="reveal">
-          <h1 class="text-4xl sm:text-6xl font-extrabold leading-tight">
-            Build. Automate. Scale.
-            <span class="block text-transparent bg-clip-text bg-gradient-to-r from-fuchsia-400 via-cyan-300 to-indigo-400">Iyonicorp</span>
-          </h1>
-          <p class="mt-4 text-slate-300 text-lg max-w-prose">Web development, AI automation, performance-first SEO, and next-gen digital experiences. A new theme with motion, depth, and delight.</p>
-          <div class="mt-8 flex gap-3 flex-wrap">
-            <a href="#services" class="neon-btn relative rounded-xl px-5 py-3 font-semibold">
-              <span class="neon-ring"></span>
-              Explore Services
-            </a>
-            <a href="#showcase" class="glass px-5 py-3 rounded-xl border border-slate-600/40 hover:border-slate-500/70 transition">See Showcase</a>
-          </div>
-        </div>
-        <div class="relative h-[320px] sm:h-[420px] md:h-[460px] reveal">
-          <div class="absolute inset-0 glass rounded-3xl shadow-neon tilt overflow-hidden">
-            <img src="pexels-thisisengineering-3861958.jpg" alt="Engineering" class="w-full h-full object-cover opacity-80">
-            <div class="tilt-inner absolute bottom-4 left-4 right-4 grid grid-cols-2 gap-3">
-              <img src="igor-omilaev-gVQLAbGVB6Q-unsplash.jpg" alt="AI Automation" class="rounded-xl border border-white/10">
-              <img src="stephen-dawson-qwtCeJ5cLYs-unsplash.jpg" alt="Hardware" class="rounded-xl border border-white/10">
-            </div>
-          </div>
-        </div>
-      </div>
-    </section>
-
-    <section id="services" class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 mt-20">
-      <h2 class="text-3xl sm:text-4xl font-bold mb-6 reveal">What we do</h2>
-      <p class="text-slate-300 max-w-3xl reveal">From high-performance websites to intelligent automation and growth marketing—crafted with precision and delivered with speed.</p>
-      <div class="mt-10 grid sm:grid-cols-2 lg:grid-cols-3 gap-6">
-        <div class="glass rounded-2xl p-6 shadow-neon hover:-translate-y-1 transition tilt reveal">
-          <div class="tilt-inner">
-            <img src="pexels-goumbik-590022.jpg" alt="Digital Marketing" class="rounded-xl mb-4 border border-white/10">
-            <h3 class="text-xl font-semibold">Digital Marketing</h3>
-            <p class="text-slate-300 mt-2">Results-focused paid ads, content, and email—informed by analytics.</p>
-            <a class="mt-4 inline-block text-cyan-300 hover:text-cyan-200" href="https://marketing.iyonicorp.com/">Discover</a>
-          </div>
-        </div>
-        <div class="glass rounded-2xl p-6 shadow-neon hover:-translate-y-1 transition tilt reveal">
-          <div class="tilt-inner">
-            <img src="pexels-thisisengineering-3861958.jpg" alt="Web Dev & SEO" class="rounded-xl mb-4 border border-white/10">
-            <h3 class="text-xl font-semibold">Web Dev & SEO</h3>
-            <p class="text-slate-300 mt-2">Fast, accessible, and SEO-optimized websites engineered to rank.</p>
-            <a class="mt-4 inline-block text-cyan-300 hover:text-cyan-200" href="https://iyonicorp.com/">Learn more</a>
-          </div>
-        </div>
-        <div class="glass rounded-2xl p-6 shadow-neon hover:-translate-y-1 transition tilt reveal">
-          <div class="tilt-inner">
-            <img src="igor-omilaev-gVQLAbGVB6Q-unsplash.jpg" alt="AI & Bots" class="rounded-xl mb-4 border border-white/10">
-            <h3 class="text-xl font-semibold">AI Automation & Bots</h3>
-            <p class="text-slate-300 mt-2">Automate workflows and support with intelligent assistants.</p>
-            <a class="mt-4 inline-block text-cyan-300 hover:text-cyan-200" href="https://iyonicbots.iyonicorp.com/">Try bots</a>
-          </div>
-        </div>
-        <div class="glass rounded-2xl p-6 shadow-neon hover:-translate-y-1 transition tilt reveal">
-          <div class="tilt-inner">
-            <img src="pexels-energepic-com-27411-2988232.jpg" alt="Payments" class="rounded-xl mb-4 border border-white/10">
-            <h3 class="text-xl font-semibold">Payment Solutions</h3>
-            <p class="text-slate-300 mt-2">Secure, seamless, global-ready checkout experiences.</p>
-            <a class="mt-4 inline-block text-cyan-300 hover:text-cyan-200" href="https://pay.iyonicorp.com/">See providers</a>
-          </div>
-        </div>
-        <div class="glass rounded-2xl p-6 shadow-neon hover:-translate-y-1 transition tilt reveal">
-          <div class="tilt-inner">
-            <img src="pexels-cottonbro-6153343.jpg" alt="Email Marketing" class="rounded-xl mb-4 border border-white/10">
-            <h3 class="text-xl font-semibold">Email Marketing</h3>
-            <p class="text-slate-300 mt-2">Automated campaigns with deliverability and insights.</p>
-            <button id="emailBtn" class="neon-btn relative rounded-xl px-4 py-2 mt-2">
-              <span class="neon-ring"></span>
-              Launching soon <span id="emailTimer" class="ml-2 opacity-90"></span>
-            </button>
-          </div>
-        </div>
-        <div class="glass rounded-2xl p-6 shadow-neon hover:-translate-y-1 transition tilt reveal">
-          <div class="tilt-inner">
-            <img src="pexels-olly-3761509.jpg" alt="Consulting" class="rounded-xl mb-4 border border-white/10">
-            <h3 class="text-xl font-semibold">Consulting</h3>
-            <p class="text-slate-300 mt-2">Strategy, audits, and technology roadmaps for growth.</p>
-            <a class="mt-4 inline-block text-cyan-300 hover:text-cyan-200" href="#contact">Talk to us</a>
-          </div>
-        </div>
-      </div>
-    </section>
-
-    <section id="showcase" class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 mt-24">
-      <div class="flex items-end justify-between">
-        <h2 class="text-3xl sm:text-4xl font-bold reveal">Showcase</h2>
-        <span class="text-slate-400 text-sm reveal">Hover for depth</span>
-      </div>
-      <div class="mt-8 grid sm:grid-cols-2 lg:grid-cols-3 gap-6">
-        <figure class="relative group overflow-hidden rounded-2xl glass shadow-neon reveal">
-          <img src="pexels-pixabay-533446.jpg" alt="Analytics" class="w-full h-64 object-cover transition duration-500 group-hover:scale-105">
-          <figcaption class="absolute inset-0 p-4 flex items-end bg-gradient-to-t from-black/40 to-transparent">Analytics & Insights</figcaption>
-        </figure>
-        <figure class="relative group overflow-hidden rounded-2xl glass shadow-neon reveal">
-          <img src="adem-ay-Tk9m_HP4rgQ-unsplash.jpg" alt="Code" class="w-full h-64 object-cover transition duration-500 group-hover:scale-105">
-          <figcaption class="absolute inset-0 p-4 flex items-end bg-gradient-to-t from-black/40 to-transparent">Modern Dev Stack</figcaption>
-        </figure>
-        <figure class="relative group overflow-hidden rounded-2xl glass shadow-neon reveal">
-          <img src="stephen-dawson-qwtCeJ5cLYs-unsplash.jpg" alt="Devices" class="w-full h-64 object-cover transition duration-500 group-hover:scale-105">
-          <figcaption class="absolute inset-0 p-4 flex items-end bg-gradient-to-t from-black/40 to-transparent">Cross‑device UX</figcaption>
-        </figure>
-        <figure class="relative group overflow-hidden rounded-2xl glass shadow-neon reveal">
-          <img src="pexels-energepic-com-27411-2988232.jpg" alt="Finance" class="w-full h-64 object-cover transition duration-500 group-hover:scale-105">
-          <figcaption class="absolute inset-0 p-4 flex items-end bg-gradient-to-t from-black/40 to-transparent">FinTech flows</figcaption>
-        </figure>
-        <figure class="relative group overflow-hidden rounded-2xl glass shadow-neon reveal">
-          <img src="pexels-thisisengineering-3861958.jpg" alt="Engineering 2" class="w-full h-64 object-cover transition duration-500 group-hover:scale-105">
-          <figcaption class="absolute inset-0 p-4 flex items-end bg-gradient-to-t from-black/40 to-transparent">Engineering</figcaption>
-        </figure>
-        <figure class="relative group overflow-hidden rounded-2xl glass shadow-neon reveal">
-          <img src="pexels-goumbik-590022.jpg" alt="Marketing" class="w-full h-64 object-cover transition duration-500 group-hover:scale-105">
-          <figcaption class="absolute inset-0 p-4 flex items-end bg-gradient-to-t from-black/40 to-transparent">Marketing Ops</figcaption>
-        </figure>
-      </div>
-    </section>
-
-    <section id="ratings" class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 mt-24">
-      <h2 class="text-3xl sm:text-4xl font-bold reveal">Ratings</h2>
-      <p class="text-slate-300 reveal">Tap the stars to rate.</p>
-      <div class="mt-8 grid sm:grid-cols-2 lg:grid-cols-3 gap-6">
-        <div class="glass rounded-2xl p-6 shadow-neon reveal">
-          <h3 class="font-semibold mb-2">Brand</h3>
-          <div class="stars flex gap-2 text-2xl"><span class="star">★</span><span class="star">★</span><span class="star">★</span><span class="star">★</span><span class="star">★</span></div>
-          <div class="mt-3 h-2 bg-white/10 rounded"><div class="h-2 bg-gradient-to-r from-fuchsia-400 to-cyan-300 rounded" style="width:95%"></div></div>
-          <div class="mt-2 text-sm text-slate-400">4.8 / 5</div>
-        </div>
-        <div class="glass rounded-2xl p-6 shadow-neon reveal">
-          <h3 class="font-semibold mb-2">Service Quality</h3>
-          <div class="stars flex gap-2 text-2xl"><span class="star">★</span><span class="star">★</span><span class="star">★</span><span class="star">★</span><span class="star">★</span></div>
-          <div class="mt-3 h-2 bg-white/10 rounded"><div class="h-2 bg-gradient-to-r from-fuchsia-400 to-cyan-300 rounded" style="width:93%"></div></div>
-          <div class="mt-2 text-sm text-slate-400">4.6 / 5</div>
-        </div>
-        <div class="glass rounded-2xl p-6 shadow-neon reveal">
-          <h3 class="font-semibold mb-2">Trust</h3>
-          <div class="stars flex gap-2 text-2xl"><span class="star">★</span><span class="star">★</span><span class="star">★</span><span class="star">★</span><span class="star">★</span></div>
-          <div class="mt-3 h-2 bg-white/10 rounded"><div class="h-2 bg-gradient-to-r from-fuchsia-400 to-cyan-300 rounded" style="width:97%"></div></div>
-          <div class="mt-2 text-sm text-slate-400">4.9 / 5</div>
-        </div>
-      </div>
-      <div id="thanks" class="popup">Thank you for your review!</div>
-    </section>
-
-    <section aria-label="brands" class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 mt-24">
-      <h2 class="text-3xl sm:text-4xl font-bold reveal">Trusted by</h2>
-      <div class="glass rounded-2xl p-4 mt-6 overflow-hidden reveal">
-        <div class="marquee items-center">
-          <img class="h-10 opacity-90" src="https://upload.wikimedia.org/wikipedia/commons/2/2f/Google_2015_logo.svg" alt="Google">
-          <img class="h-10 opacity-90" src="https://upload.wikimedia.org/wikipedia/commons/4/44/Microsoft_logo.svg" alt="Microsoft">
-          <img class="h-10 opacity-90" src="https://upload.wikimedia.org/wikipedia/commons/a/a9/Amazon_logo.svg" alt="Amazon">
-          <img class="h-10 opacity-90" src="https://i.imgur.com/RHSAjpU.png" alt="Iyonicpay">
-          <img class="h-10 opacity-90" src="https://upload.wikimedia.org/wikipedia/commons/2/24/Adidas_logo.png" alt="Adidas">
-          <img class="h-10 opacity-90" src="https://upload.wikimedia.org/wikipedia/commons/f/fa/Apple_logo_black.svg" alt="Apple">
-          <img class="h-10 opacity-90" src="https://upload.wikimedia.org/wikipedia/commons/5/51/IBM_logo.svg" alt="IBM">
-          <img class="h-10 opacity-90" src="https://upload.wikimedia.org/wikipedia/commons/a/a6/Logo_NIKE.svg" alt="Nike">
-          <img class="h-10 opacity-90" src="https://upload.wikimedia.org/wikipedia/commons/0/04/Visa.svg" alt="Visa">
-          <img class="h-10 opacity-90" src="https://upload.wikimedia.org/wikipedia/commons/2/2a/Mastercard-logo.svg" alt="Mastercard">
-          <img class="h-10 opacity-90" src="https://upload.wikimedia.org/wikipedia/commons/2/2f/Google_2015_logo.svg" alt="Google">
-          <img class="h-10 opacity-90" src="https://upload.wikimedia.org/wikipedia/commons/4/44/Microsoft_logo.svg" alt="Microsoft">
-          <img class="h-10 opacity-90" src="https://upload.wikimedia.org/wikipedia/commons/a/a9/Amazon_logo.svg" alt="Amazon">
-          <img class="h-10 opacity-90" src="https://i.imgur.com/RHSAjpU.png" alt="Iyonicpay">
-          <img class="h-10 opacity-90" src="https://upload.wikimedia.org/wikipedia/commons/2/24/Adidas_logo.png" alt="Adidas">
-          <img class="h-10 opacity-90" src="https://upload.wikimedia.org/wikipedia/commons/f/fa/Apple_logo_black.svg" alt="Apple">
-          <img class="h-10 opacity-90" src="https://upload.wikimedia.org/wikipedia/commons/5/51/IBM_logo.svg" alt="IBM">
-          <img class="h-10 opacity-90" src="https://upload.wikimedia.org/wikipedia/commons/a/a6/Logo_NIKE.svg" alt="Nike">
-          <img class="h-10 opacity-90" src="https://upload.wikimedia.org/wikipedia/commons/0/04/Visa.svg" alt="Visa">
-          <img class="h-10 opacity-90" src="https://upload.wikimedia.org/wikipedia/commons/2/2a/Mastercard-logo.svg" alt="Mastercard">
-        </div>
-      </div>
-    </section>
-
-    <section id="contact" class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 mt-24">
-      <div class="grid md:grid-cols-2 gap-10">
-        <div class="reveal">
-          <h2 class="text-3xl sm:text-4xl font-bold">Let's work together</h2>
-          <p class="text-slate-300 mt-2">Need a website, automation, or growth strategy? Send a message and we’ll reply shortly.</p>
-          <div class="mt-6 glass rounded-2xl p-4">
-            <ul class="space-y-2 text-slate-300">
-              <li>• Web apps and sites that convert</li>
-              <li>• AI automation and bots</li>
-              <li>• SEO and performance optimization</li>
-              <li>• Payments and integrations</li>
-            </ul>
-          </div>
-        </div>
-        <form id="contactForm" class="glass rounded-2xl p-6 shadow-neon reveal">
-          <div class="grid sm:grid-cols-2 gap-4">
-            <div>
-              <label class="text-sm text-slate-300">Name</label>
-              <input id="name" required class="mt-1 w-full rounded-lg bg-white/5 border border-white/10 px-3 py-2 outline-none focus:border-cyan-300 text-white" type="text" placeholder="Jane Doe">
-            </div>
-            <div>
-              <label class="text-sm text-slate-300">Email</label>
-              <input id="email" required class="mt-1 w-full rounded-lg bg-white/5 border border-white/10 px-3 py-2 outline-none focus:border-cyan-300 text-white" type="email" placeholder="jane@example.com">
-            </div>
-          </div>
-          <div class="mt-4">
-            <label class="text-sm text-slate-300">Message</label>
-            <textarea id="message" required rows="5" class="mt-1 w-full rounded-lg bg-white/5 border border-white/10 px-3 py-2 outline-none focus:border-cyan-300 text-white" placeholder="Tell us about your project..."></textarea>
-          </div>
-          <button type="submit" class="mt-6 neon-btn relative rounded-xl px-5 py-3 font-semibold">
-            <span class="neon-ring"></span>
-            Send Message
-          </button>
-          <div id="responseMessage" class="mt-3 text-sm hidden"></div>
-        </form>
-      </div>
-    </section>
+<body>
+  <a class="skip" href="#main">Skip to content</a>
+  <header class="header"><div class="wrap nav" id="nav">
+    <a class="brand" href="#top" aria-label="Iyonicorp home"><span class="brand-mark">i.</span><span>IYONICORP</span></a>
+    <nav class="nav-center" aria-label="Main navigation"><a href="#products">Products</a><a href="#about">About</a></nav>
+    <div class="nav-right"><a href="https://iyonicorp.com/">Sign in</a><a class="button" href="#products">Get started <span aria-hidden="true">→</span></a></div>
+    <button class="menu-button" id="menuButton" type="button" aria-label="Open navigation" aria-expanded="false">☰</button>
+  </div></header>
+  <main id="main">
+    <section class="hero" id="top"><div class="wrap hero-grid">
+      <div><div class="kicker">The business toolkit for what’s next</div><h1>Build a business<br>that <em>moves with</em><br>you.</h1><p class="hero-copy">The right tools can change everything. Iyonicorp brings your storefront, payments, customer relationships, and everyday work into one connected ecosystem.</p><div class="hero-actions"><a class="button" href="#products">Find your starting point <span aria-hidden="true">→</span></a><a class="text-action" href="#products">Explore the products <span aria-hidden="true">↓</span></a></div><div class="secure-note"><svg viewBox="0 0 20 20" fill="none" aria-hidden="true"><path d="m4 10 4 4 8-9" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/></svg>Start with one tool. Add more when you need it.</div></div>
+      <div class="visual" role="img" aria-label="Illustration of a connected Iyonicorp business workspace"><div class="dashboard"><div class="dash-bar"><span class="dot"></span><span class="dot"></span><span class="dot"></span><span class="dash-name">IYONI BUSINESS WORKSPACE</span><span class="dash-spark">✦</span></div><div class="dash-content"><div class="dash-label">Your business</div><div class="dash-title">Everything is connected.</div><div class="dash-row"><div class="dash-tile"><div class="tile-icon">▦</div><div class="tile-title">Sell &amp; serve</div><div class="tile-sub">Your storefront</div></div><div class="dash-tile"><div class="tile-icon">▱</div><div class="tile-title">Get paid</div><div class="tile-sub">Payment tools</div></div><div class="dash-tile"><div class="tile-icon">✉</div><div class="tile-title">Stay close to customers</div><div class="tile-sub">Email, insight, and useful everyday tools</div></div></div></div></div><div class="floating-note note-a"><span class="check">✓</span>Ready for your next step</div><div class="floating-note note-b"><span class="check">✦</span>One connected ecosystem</div><div class="visual-caption">One account · room to grow</div></div>
+    </div></section>
+    <section class="capability-bar" aria-label="Business capabilities"><div class="wrap capabilities"><span>Your business, supported</span><span><i>⌂</i>Sell</span><span><i>▱</i>Get paid</span><span><i>✉</i>Stay close</span><span><i>✧</i>Automate</span><span><i>◉</i>Understand</span></div></section>
+    <section class="section products-section" id="products"><div class="wrap"><div class="section-head"><div><div class="kicker">A platform with room to grow</div><h2>Start with what you need.<br><em>Keep building from there.</em></h2></div><p>Every business has its own rhythm. Choose the tools that fit today and bring more of your work together as your ideas grow.</p></div><div class="product-grid">
+      <article class="product-card featured"><span class="number">01</span><div class="product-icon">⌂</div><div class="product-type">Sell &amp; serve</div><h3>IyonicBiz</h3><p>The home base for your business: storefronts, bookings, customers, and daily operations.</p><a href="https://iyonicorp.com/">Explore IyonicBiz <span aria-hidden="true">↗</span></a></article>
+      <article class="product-card featured"><span class="number">02</span><div class="product-icon">▣</div><div class="product-type">Discover &amp; source</div><h3>IyonicShop</h3><p>Explore products and give your next great idea a place on the shelf.</p><a href="https://iyonicorp.com/">Explore IyonicShop <span aria-hidden="true">↗</span></a></article>
+      <article class="product-card"><span class="number">03</span><div class="product-icon">▱</div><div class="product-type">Payments</div><h3>IyonicPay</h3><p>Simple payment tools for the moment your customer is ready.</p><a href="https://iyonicorp.com/">Explore IyonicPay <span aria-hidden="true">↗</span></a></article>
+      <article class="product-card"><span class="number">04</span><div class="product-icon">✧</div><div class="product-type">AI &amp; automation</div><h3>Iyonic Intelligence</h3><p>Useful conversations and workflows that keep moving.</p><a href="https://iyonicorp.com/">Explore Iyonic Intelligence <span aria-hidden="true">↗</span></a></article>
+      <article class="product-card"><span class="number">05</span><div class="product-icon">◉</div><div class="product-type">Business data</div><h3>IyonicDB</h3><p>Keep your information organized, connected, and ready to use.</p><a href="https://iyonicorp.com/">Explore IyonicDB <span aria-hidden="true">↗</span></a></article>
+      <article class="product-card"><span class="number">06</span><div class="product-icon">✉</div><div class="product-type">Customer email</div><h3>IyonicMailer</h3><p>Build campaigns and stay close to the people you serve.</p><a href="https://iyonicorp.com/">Explore IyonicMailer <span aria-hidden="true">↗</span></a></article>
+      <article class="product-card"><span class="number">07</span><div class="product-icon">▦</div><div class="product-type">Your toolkit</div><h3>IyonicSpace</h3><p>A personal space for creative tools, useful utilities, and focused work.</p><a href="https://iyonicorp.com/">Explore IyonicSpace <span aria-hidden="true">↗</span></a></article>
+    </div></div></section>
+    <section class="section ecosystem"><div class="wrap ecosystem-grid"><div><div class="kicker">Made to work together</div><h2>Less juggling.<br><em>More doing.</em></h2><p class="ecosystem-copy">When your storefront, payments, customer relationships, business data, and everyday tools can work together, you can spend more time on the work that matters.</p><a class="button light" href="#products">Explore the ecosystem <span aria-hidden="true">→</span></a></div><div class="product-orbit" aria-label="Seven products connected through Iyonicorp"><div class="orbit-lines"></div><div class="orbit-center">IYONI</div><div class="orbit-product one"><small>Business</small>IyonicBiz</div><div class="orbit-product two"><small>Discover</small>IyonicShop</div><div class="orbit-product three"><small>Payments</small>IyonicPay</div><div class="orbit-product four"><small>AI &amp; automation</small>Iyonic Intelligence</div><div class="orbit-product five"><small>Data</small>IyonicDB</div><div class="orbit-product six"><small>Email</small>IyonicMailer</div><div class="orbit-product seven"><small>Workspace</small>IyonicSpace</div></div></div></section>
+    <section class="section company-section" id="about"><div class="wrap"><div class="section-head"><div><div class="kicker">About Iyonicorp</div><h2>Built around the work<br><em>you want to do.</em></h2></div><p>Iyonicorp creates a connected home for the tools behind modern business.</p></div><div class="company-grid"><p class="company-statement">A connected workspace for builders, operators, and teams shaping what comes next.</p><div class="company-detail"><p>Our products support the everyday work of building a business: reaching customers, selling, getting paid, understanding your operations, and making space for new ideas.</p><p>Start with one product and add more as your business grows. Iyonicorp is based in Nairobi, Kenya.</p><div class="company-facts"><span>Digital business tools</span><span>One connected ecosystem</span><span>Nairobi, Kenya</span></div></div></div></div></section>
+    <section class="contact-band"><div class="wrap contact-grid"><div><div class="kicker">Your next step</div><h2>Make room for<br>what comes next.</h2><p>Explore Iyonicorp and find the tools that fit the way you work.</p></div><div class="contact-actions"><a class="button" href="https://iyonicorp.com/">Visit iyonicorp.com <span aria-hidden="true">↗</span></a><a class="button secondary" href="mailto:hello@iyonicorp.com">Contact the team <span aria-hidden="true">↗</span></a></div></div></section>
   </main>
-
-  <footer class="mt-24 border-t border-white/10">
-    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-10 flex flex-col md:flex-row items-center justify-between gap-4">
-      <div class="brand text-lg">Iyonicorp</div>
-      <p class="text-slate-400 text-sm">© 2025 Iyonicorp. All rights reserved.</p>
-      <a href="#top" id="topLink" class="hidden">Top</a>
-    </div>
-  </footer>
-
-  <button id="topBtn" class="glass rounded-full p-3 shadow-neon">↑</button>
-
+  <footer class="footer"><div class="wrap"><div class="footer-top"><div><a class="brand" href="#top"><span class="brand-mark">i.</span><span>IYONICORP</span></a><p class="footer-summary">Platforms for builders, operators, and teams shaping what comes next.</p></div><div class="footer-links"><a href="#products">Products</a><a href="#about">About</a><a href="https://iyonicorp.com/">Main website ↗</a><a href="mailto:hello@iyonicorp.com">Contact</a></div></div><div class="copyright"><span>© <span id="year">2026</span> Iyonicorp. All rights reserved.</span><span>Nairobi, Kenya</span></div></div></footer>
   <script>
-  // Smooth anchor scroll
-  document.addEventListener('click', (e) => {
-    const a = e.target.closest('a[href^="#"]');
-    if(!a) return;
-    const id = a.getAttribute('href').slice(1);
-    const el = document.getElementById(id);
-    if(el){ e.preventDefault(); window.scrollTo({top: el.offsetTop - 70, behavior:'smooth'}); }
-  });
-
-  // Mobile menu
-  const menuBtn = document.getElementById('menuBtn');
-  const mobileMenu = document.getElementById('mobileMenu');
-  if(menuBtn){
-    menuBtn.addEventListener('click', ()=> mobileMenu.classList.toggle('hidden'));
-  }
-
-  // Reveal on scroll
-  const io = new IntersectionObserver((entries)=>{
-    for(const en of entries){
-      en.target.classList.toggle('show', en.isIntersecting);
-    }
-  }, {threshold: 0.18});
-  document.querySelectorAll('.reveal').forEach(el=> io.observe(el));
-
-  // Tilt effect
-  document.querySelectorAll('.tilt').forEach(card=>{
-    card.addEventListener('mousemove', (e)=>{
-      const r = card.getBoundingClientRect();
-      const x = e.clientX - r.left, y = e.clientY - r.top;
-      const rx = ((y/r.height)-0.5)*-10;
-      const ry = ((x/r.width)-0.5)*10;
-      card.style.transform = `perspective(900px) rotateX(${rx}deg) rotateY(${ry}deg)`;
-    });
-    card.addEventListener('mouseleave', ()=> card.style.transform='perspective(900px) rotateX(0) rotateY(0)');
-  });
-
-  // Particles canvas
-  (function(){
-    const c = document.getElementById('particles');
-    const ctx = c.getContext('2d');
-    let w,h,px,py,pts=[];
-    function resize(){ w= c.width = innerWidth; h= c.height = innerHeight; }
-    addEventListener('resize', resize); resize();
-    addEventListener('mousemove', e=>{ px=e.clientX; py=e.clientY; });
-    for(let i=0;i<90;i++){ pts.push({x:Math.random()*innerWidth, y:Math.random()*innerHeight, vx:(Math.random()-0.5)*0.6, vy:(Math.random()-0.5)*0.6}); }
-    function step(){
-      ctx.clearRect(0,0,w,h);
-      for(const p of pts){
-        p.x+=p.vx; p.y+=p.vy;
-        if(p.x<0||p.x>w) p.vx*=-1;
-        if(p.y<0||p.y>h) p.vy*=-1;
-        ctx.fillStyle='rgba(255,255,255,0.6)';
-        ctx.fillRect(p.x,p.y,1.5,1.5);
-        if(px!==undefined){
-          const dx=p.x-px, dy=p.y-py, d= Math.hypot(dx,dy);
-          if(d<120){
-            ctx.strokeStyle=`rgba(124,58,237,${1-d/120})`;
-            ctx.beginPath(); ctx.moveTo(p.x,p.y); ctx.lineTo(px,py); ctx.stroke();
-          }
-        }
-      }
-      requestAnimationFrame(step);
-    }
-    step();
-  })();
-
-  // Ratings
-  (function(){
-    const groups = document.querySelectorAll('.stars');
-    const popup = document.getElementById('thanks');
-    groups.forEach(g=>{
-      g.querySelectorAll('.star').forEach((s,i,arr)=>{
-        s.addEventListener('click', ()=>{
-          arr.forEach((t,idx)=> t.classList.toggle('active', idx<=i));
-          popup.classList.add('show');
-          setTimeout(()=> popup.classList.remove('show'), 1800);
-        });
-      });
-    });
-  })();
-
-  // Back to top
-  const topBtn = document.getElementById('topBtn');
-  addEventListener('scroll', ()=>{
-    const show = scrollY>600;
-   topBtn.classList.toggle('visible', show);
-  });
-  topBtn.addEventListener('click', ()=> window.scrollTo({top:0, behavior:'smooth'}));
-
-  // Email countdown lazy start
-  (function(){
-    const btn = document.getElementById('emailBtn');
-    const timerSpan = document.getElementById('emailTimer');
-    if(!btn) return;
-    let started=false;
-    const launchDate = new Date(Date.now() + 3*24*60*60*1000);
-    function tick(){
-      const d = launchDate - new Date();
-      if(d<=0){
-        btn.innerText='Try now';
-        btn.addEventListener('click', ()=> location.href='https://yourwebsite.com/email-marketing');
-        return;
-      }
-      const days = Math.floor(d/(1000*60*60*24));
-      const hours = Math.floor((d/(1000*60*60))%24);
-      const minutes = Math.floor((d/(1000*60))%60);
-      const seconds = Math.floor((d/1000)%60);
-      timerSpan.textContent = `${days}d ${hours}h ${minutes}m ${seconds}s`;
-      setTimeout(tick,1000);
-    }
-    ['mouseenter','focus'].forEach(evt=> btn.addEventListener(evt, ()=>{ if(!started){ started=true; tick(); } }));
-  })();
-
-  // Contact form
-  document.getElementById('contactForm').addEventListener('submit', async (e)=>{
-    e.preventDefault();
-    const name = document.getElementById('name').value.replace(/</g,'<').replace(/>/g,'>');
-   const email = document.getElementById('email').value.replace(/</g,'<').replace(/>/g,'>');
-    const message = document.getElementById('message').value.replace(/</g,'<').replace(/>/g,'>');
-    const ui = document.getElementById('responseMessage');
-    ui.classList.remove('hidden');
-    ui.textContent='Sending...';
-    try{
-      const res = await fetch('https://iyonicorp.onrender.com/send-email',{method:'POST', headers:{'Content-Type':'application/json'}, body:JSON.stringify({name,email,message})});
-      const data = await res.json();
-      if(data.success){ ui.textContent='Message sent successfully.'; ui.className='mt-3 text-sm text-emerald-300'; e.target.reset(); }
-      else { ui.textContent='Failed to send. Try again.'; ui.className='mt-3 text-sm text-rose-300'; }
-    }catch(err){
-      ui.textContent='Error sending message.'; ui.className='mt-3 text-sm text-rose-300';
-    }finally{
-      setTimeout(()=> ui.classList.add('hidden'), 2800);
-    }
-  });
+    const nav=document.getElementById('nav');
+    const menuButton=document.getElementById('menuButton');
+    menuButton.addEventListener('click',()=>{const open=menuButton.getAttribute('aria-expanded')!=='true';menuButton.setAttribute('aria-expanded',String(open));menuButton.setAttribute('aria-label',open?'Close navigation':'Open navigation');menuButton.textContent=open?'×':'☰';nav.classList.toggle('mobile-open',open)});
+    document.querySelectorAll('.nav-center a').forEach(link=>link.addEventListener('click',()=>{nav.classList.remove('mobile-open');menuButton.setAttribute('aria-expanded','false');menuButton.setAttribute('aria-label','Open navigation');menuButton.textContent='☰'}));
+    document.getElementById('year').textContent=new Date().getFullYear();
   </script>
 </body>
 </html>
