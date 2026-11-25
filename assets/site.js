@@ -69,6 +69,7 @@ document.querySelectorAll('[data-year]').forEach(node => {
 
 const contactForm = document.querySelector('[data-contact-form]');
 if (contactForm) {
+  let isSubmitting = false;
   const topic = new URLSearchParams(window.location.search).get('topic');
   const inquirySelect = contactForm.elements.inquiryType;
   if (topic === 'investor') inquirySelect.value = 'investor';
@@ -79,13 +80,19 @@ if (contactForm) {
 
   contactForm.addEventListener('submit', async event => {
     event.preventDefault();
+    if (isSubmitting || !contactForm.reportValidity()) return;
+
+    isSubmitting = true;
     const status = contactForm.querySelector('[data-form-status]');
     const submit = contactForm.querySelector('button[type="submit"]');
-    const data = new FormData(contactForm);
-    const payload = Object.fromEntries(data.entries());
-    if (!contactForm.reportValidity()) return;
-    status.textContent = 'Sending your message…';
+    const label = submit.querySelector('[data-submit-label]');
+    const originalLabel = label.textContent;
+    const payload = Object.fromEntries(new FormData(contactForm).entries());
     submit.disabled = true;
+    submit.setAttribute('aria-busy', 'true');
+    label.textContent = 'Sending…';
+    status.textContent = 'Sending your message…';
+
     try {
       const response = await fetch('https://iyonicorp.onrender.com/send-email', {
         method: 'POST',
@@ -103,7 +110,10 @@ if (contactForm) {
         ? 'We couldn’t reach Iyonicorp’s email service. Please try again or email iyonicorp@gmail.com.'
         : (error.message || 'We couldn’t send your message. Please try again.');
     } finally {
+      isSubmitting = false;
       submit.disabled = false;
+      submit.removeAttribute('aria-busy');
+      label.textContent = originalLabel;
     }
   });
 }
