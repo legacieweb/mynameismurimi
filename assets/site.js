@@ -84,14 +84,10 @@ if (contactForm) {
     const data = new FormData(contactForm);
     const payload = Object.fromEntries(data.entries());
     if (!contactForm.reportValidity()) return;
-    if (window.location.protocol === 'file:') {
-      status.textContent = 'Open this page through the website or the Node server to send a message. A local file cannot reach the secure IyonicMailer service.';
-      return;
-    }
     status.textContent = 'Sending your message…';
     submit.disabled = true;
     try {
-      const response = await fetch('/send-email', {
+      const response = await fetch('https://iyonicorp.onrender.com/send-email', {
         method: 'POST',
         headers: { 'Content-Type': 'application/json' },
         body: JSON.stringify(payload)
@@ -104,7 +100,7 @@ if (contactForm) {
         : 'Your message was sent to Iyonicorp. We couldn’t send the email copy, but the team received your note.';
     } catch (error) {
       status.textContent = error.message === 'Failed to fetch'
-        ? 'We couldn’t reach the message service. Please try again or email iyonicorp@gmail.com.'
+        ? 'We couldn’t reach Iyonicorp’s email service. Please try again or email iyonicorp@gmail.com.'
         : (error.message || 'We couldn’t send your message. Please try again.');
     } finally {
       submit.disabled = false;

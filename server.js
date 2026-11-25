@@ -19,7 +19,7 @@ app.use(helmet());
 
 // 🌍 Enable CORS (Restrict Allowed Domains)
 app.use(cors({
-  origin: ["https://www.iyonicorp.com", "https://info.iyonicorp.com"],
+  origin: ["https://iyonicorp.com", "https://www.iyonicorp.com", "https://info.iyonicorp.com", "null"],
   methods: ["GET", "POST"],
   allowedHeaders: ["Content-Type", "Authorization"]
 }));
